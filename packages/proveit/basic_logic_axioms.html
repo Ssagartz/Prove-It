@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+<title>Basic axioms of proveit.logic</title>
+
+<style type="text/css">
+/* Overrides of notebook CSS for static HTML export */
+body {
+  overflow: visible;
+  padding: 8px;
+}
+div#notebook {
+  overflow: visible;
+  border-top: none;
+}@media print {
+  div.cell {
+    display: block;
+    page-break-inside: avoid;
+  } 
+  div.output_wrapper { 
+    display: block;
+    page-break-inside: avoid; 
+  }
+  div.output { 
+    display: block;
+    page-break-inside: avoid; 
+  }
+}
+</style>
+
+<!-- Custom stylesheet, it must be in the same directory as the html file -->
+<link rel="stylesheet" href="notebook.css">
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script></head>
+<body>
+  <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Basic-axioms-of-proveit.logic">Basic axioms of <a class="ProveItLink" href="logic/_context_.html">proveit.logic</a><a class="anchor-link" href="#Basic-axioms-of-proveit.logic">&#182;</a></h1><p>This is a reduced set of basic axioms for an initial consistency check.  Perhaps we can reduce this further, but this a a first stab at it.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">proveit.logic.boolean._axioms_</span>
+<span class="kn">import</span> <span class="nn">proveit.logic.boolean.implication._axioms_</span>
+<span class="kn">import</span> <span class="nn">proveit.logic.boolean.negation._axioms_</span>
+<span class="kn">import</span> <span class="nn">proveit.logic.boolean.conjunction._axioms_</span>
+<span class="kn">import</span> <span class="nn">proveit.logic.boolean.disjunction._axioms_</span>
+<span class="kn">import</span> <span class="nn">proveit.logic.boolean.quantification.universal._axioms_</span>
+<span class="kn">import</span> <span class="nn">proveit.logic.boolean.quantification.existential._axioms_</span>
+<span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">boolean</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">trueAxiom</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[1]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\boolean\__pv_it\68a87cc3370287d726c7086ace789e680e4461c30\expr.html"><img src="logic\boolean\__pv_it\68a87cc3370287d726c7086ace789e680e4461c30\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">boolean</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">falseNotTrue</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[2]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\boolean\__pv_it\3e28545b304b5eec31fcc9e7531755af827b4bfc0\expr.html"><img src="logic\boolean\__pv_it\3e28545b304b5eec31fcc9e7531755af827b4bfc0\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>While the below is not actually an axiom of the system, it can take the place of defining Booleans as an enumerated set and defining what an enumerated set is for a set of basic logic axioms that doesn't define any other set that the Booleans.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">proveit._common_</span> <span class="kn">import</span> <span class="n">A</span>
+<span class="kn">from</span> <span class="nn">proveit.logic</span> <span class="kn">import</span> <span class="n">Booleans</span><span class="p">,</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">,</span> <span class="n">Or</span><span class="p">,</span> <span class="n">Forall</span><span class="p">,</span> <span class="n">Equals</span><span class="p">,</span> <span class="n">InSet</span>
+<span class="n">Forall</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">Equals</span><span class="p">(</span><span class="n">InSet</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">Booleans</span><span class="p">),</span> <span class="n">Or</span><span class="p">(</span><span class="n">Equals</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">TRUE</span><span class="p">),</span> <span class="n">Equals</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">))))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[3]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<a class="ProveItLink" href="__pv_it\b85b0c4ee930df42db3576a71277ce8bfe9817f80\expr.html"><img src="__pv_it\b85b0c4ee930df42db3576a71277ce8bfe9817f80\expr.png" style="display:inline;vertical-align:middle;" /></a>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">boolean</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">eqTrueIntro</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[4]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\boolean\__pv_it\17736e5847b2b74f86dc8cccbef45d3aeb8a06e80\expr.html"><img src="logic\boolean\__pv_it\17736e5847b2b74f86dc8cccbef45d3aeb8a06e80\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">boolean</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">eqTrueElim</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\boolean\__pv_it\1abd0401f7baebea707022eba957f2c3d2c647cd0\expr.html"><img src="logic\boolean\__pv_it\1abd0401f7baebea707022eba957f2c3d2c647cd0\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">boolean</span><span class="o">.</span><span class="n">implication</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">impliesFalseDef</span> <span class="c1"># required for proof-by-contradiction</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[6]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\boolean\implication\__pv_it\85d874ce3755cdbc16cf1820a52cf8da15e007110\expr.html"><img src="logic\boolean\implication\__pv_it\85d874ce3755cdbc16cf1820a52cf8da15e007110\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># An implication is vacuously true if its antecedent is untrue.</span>
+<span class="c1"># This will allow us to prove nonsense implications but only when the</span>
+<span class="c1"># antecedent is untrue and cannot be used to prove the nonsense conclusion.</span>
+<span class="c1"># This is our &quot;harmless nonsense&quot; principle.</span>
+<span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">boolean</span><span class="o">.</span><span class="n">implication</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">untrueAntecedentImplication</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[7]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\boolean\implication\__pv_it\12b0498b3c57d3600c755478c4d9e3a912ce18fd0\expr.html"><img src="logic\boolean\implication\__pv_it\12b0498b3c57d3600c755478c4d9e3a912ce18fd0\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">boolean</span><span class="o">.</span><span class="n">negation</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">negationIntro</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\boolean\negation\__pv_it\07247e05a1947299288ef312670c6e912da6cc800\expr.html"><img src="logic\boolean\negation\__pv_it\07247e05a1947299288ef312670c6e912da6cc800\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">boolean</span><span class="o">.</span><span class="n">negation</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">negationElim</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[9]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\boolean\negation\__pv_it\4b5dd3f037f440d68a8f1e360a14677af00fd6dd0\expr.html"><img src="logic\boolean\negation\__pv_it\4b5dd3f037f440d68a8f1e360a14677af00fd6dd0\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">boolean</span><span class="o">.</span><span class="n">negation</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">falsifiedNegationIntro</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[10]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\boolean\negation\__pv_it\93bbdeb077b26a36924b65313bddf5f2f56f2e8f0\expr.html"><img src="logic\boolean\negation\__pv_it\93bbdeb077b26a36924b65313bddf5f2f56f2e8f0\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">boolean</span><span class="o">.</span><span class="n">negation</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">falsifiedNegationElim</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[11]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\boolean\negation\__pv_it\6d76e08f75887095652a39253ad5f1d828ecb85e0\expr.html"><img src="logic\boolean\negation\__pv_it\6d76e08f75887095652a39253ad5f1d828ecb85e0\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">boolean</span><span class="o">.</span><span class="n">conjunction</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">andTT</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[12]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\boolean\conjunction\__pv_it\8898576b5e2da836accfecb245314d00556cd07d0\expr.html"><img src="logic\boolean\conjunction\__pv_it\8898576b5e2da836accfecb245314d00556cd07d0\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">boolean</span><span class="o">.</span><span class="n">conjunction</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">andTF</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\boolean\conjunction\__pv_it\bf71336d19004bcf68c4f8a839cdcc9eb9f93c420\expr.html"><img src="logic\boolean\conjunction\__pv_it\bf71336d19004bcf68c4f8a839cdcc9eb9f93c420\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">boolean</span><span class="o">.</span><span class="n">conjunction</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">andFT</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[14]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\boolean\conjunction\__pv_it\d54a4c9f80bf23554462e7252a7e121d66eb7fc10\expr.html"><img src="logic\boolean\conjunction\__pv_it\d54a4c9f80bf23554462e7252a7e121d66eb7fc10\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">boolean</span><span class="o">.</span><span class="n">conjunction</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">andFF</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[15]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\boolean\conjunction\__pv_it\8df69cfea9870bb41766cd368a2cd850d5a07bc80\expr.html"><img src="logic\boolean\conjunction\__pv_it\8df69cfea9870bb41766cd368a2cd850d5a07bc80\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">boolean</span><span class="o">.</span><span class="n">conjunction</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">leftInBool</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[16]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\boolean\conjunction\__pv_it\5c5b6f6980ca12218efe4e30586e95d8a52a4cb90\expr.html"><img src="logic\boolean\conjunction\__pv_it\5c5b6f6980ca12218efe4e30586e95d8a52a4cb90\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">boolean</span><span class="o">.</span><span class="n">conjunction</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">rightInBool</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[17]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\boolean\conjunction\__pv_it\cee42885d6de1fa3c8708b13a0a30b5ebd19febb0\expr.html"><img src="logic\boolean\conjunction\__pv_it\cee42885d6de1fa3c8708b13a0a30b5ebd19febb0\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">boolean</span><span class="o">.</span><span class="n">disjunction</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">orTT</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[18]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\boolean\disjunction\__pv_it\46b4be8c4870bb7ea30d42f7deef7401936813fb0\expr.html"><img src="logic\boolean\disjunction\__pv_it\46b4be8c4870bb7ea30d42f7deef7401936813fb0\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">boolean</span><span class="o">.</span><span class="n">disjunction</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">orTF</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[19]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\boolean\disjunction\__pv_it\c6a5e272e6b810bb3e810161783e4a60ed64985c0\expr.html"><img src="logic\boolean\disjunction\__pv_it\c6a5e272e6b810bb3e810161783e4a60ed64985c0\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">boolean</span><span class="o">.</span><span class="n">disjunction</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">orFT</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[20]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\boolean\disjunction\__pv_it\c943d61c9bb2a5110cd67bf9ab27bf15a75aa0e50\expr.html"><img src="logic\boolean\disjunction\__pv_it\c943d61c9bb2a5110cd67bf9ab27bf15a75aa0e50\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">boolean</span><span class="o">.</span><span class="n">disjunction</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">orFF</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[21]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\boolean\disjunction\__pv_it\bd62208cdf94c89676249e4a516e50ad1c7d43c40\expr.html"><img src="logic\boolean\disjunction\__pv_it\bd62208cdf94c89676249e4a516e50ad1c7d43c40\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">boolean</span><span class="o">.</span><span class="n">disjunction</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">leftInBool</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[22]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\boolean\disjunction\__pv_it\bde50ad9e36b4ffca0348858851f2ab49dd462d80\expr.html"><img src="logic\boolean\disjunction\__pv_it\bde50ad9e36b4ffca0348858851f2ab49dd462d80\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">boolean</span><span class="o">.</span><span class="n">disjunction</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">rightInBool</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[23]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\boolean\disjunction\__pv_it\30c52e2f6bddaee0007f0657eafd92263e83474d0\expr.html"><img src="logic\boolean\disjunction\__pv_it\30c52e2f6bddaee0007f0657eafd92263e83474d0\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># probably not needed as a basic axiom</span>
+<span class="c1">#proveit.logic.boolean.quantification.universal._axioms_.forallInBool</span>
+
+<span class="kn">import</span> <span class="nn">proveit.logic.equality._axioms_</span>
+<span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">equality</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">equalityInBool</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[24]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\equality\__pv_it\d6871f7976394b5b722adb0bd3bfa4540855ff3b0\expr.html"><img src="logic\equality\__pv_it\d6871f7976394b5b722adb0bd3bfa4540855ff3b0\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">equality</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">equalsReflexivity</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[25]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\equality\__pv_it\2f7362f515695890a15d40f2d4676f710de88f820\expr.html"><img src="logic\equality\__pv_it\2f7362f515695890a15d40f2d4676f710de88f820\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">equality</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">equalsSymmetry</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[26]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\equality\__pv_it\a06b7ed883705a47e7b691d3701ddd973e4e7abf0\expr.html"><img src="logic\equality\__pv_it\a06b7ed883705a47e7b691d3701ddd973e4e7abf0\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">equality</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">equalsTransitivity</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[27]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\equality\__pv_it\8568f704f865c42c6973d1dbf089a1e8c8b69dcf0\expr.html"><img src="logic\equality\__pv_it\8568f704f865c42c6973d1dbf089a1e8c8b69dcf0\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">equality</span><span class="o">.</span><span class="n">_axioms_</span><span class="o">.</span><span class="n">substitution</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[28]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="logic\equality\__pv_it\bbfdd4b897b23eab94ccd38e967c2b310ba4362c0\expr.html"><img src="logic\equality\__pv_it\bbfdd4b897b23eab94ccd38e967c2b310ba4362c0\expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+<footer>
+  <p>These web pages were generated on 2018-11-30 by <a href="https://github.com/PyProveIt/Prove-It">Prove-It</a> Beta Version 0.3, licensed under the GNU Public License by Sandia Corporation.</p>
+  <p>Presented proofs are not absolutely guaranteed.  For assurance, it is important to check the structure 
+  of the statement being proven, independently verify the derivation steps, track dependencies, and ensure that 
+  employed axioms are valid and properly structured.  Inconsistencies may exist, unknowingly, in this system.
+  </p>
+  <p>
+  This material is based upon work supported by the U.S. Department of Energy, Office of Science, Office of Advanced Scientific Computing Research, under the Quantum Computing Application Teams program. Sandia National Labs is managed and operated by National Technology and Engineering Solutions of Sandia, LLC, a subsidiary of Honeywell International, Inc., for the U.S. Dept. of Energy's NNSA under contract DE-NA0003525. The views expressed above do not necessarily represent the views of the DOE or the U.S. Government.
+  </p>
+  <br>
+  <p>Please send questions/comments to: <a href="mailto:wwitzel@sandia.gov">
+  wwitzel@sandia.gov</a>.</p>
+</footer> 
+</body>
+
+ 
+
+
+</html>

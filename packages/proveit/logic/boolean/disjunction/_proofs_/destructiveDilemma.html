@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+<title>Proof of proveit.logic.boolean.disjunction.destructiveDilemma theorem</title>
+
+<style type="text/css">
+/* Overrides of notebook CSS for static HTML export */
+body {
+  overflow: visible;
+  padding: 8px;
+}
+div#notebook {
+  overflow: visible;
+  border-top: none;
+}@media print {
+  div.cell {
+    display: block;
+    page-break-inside: avoid;
+  } 
+  div.output_wrapper { 
+    display: block;
+    page-break-inside: avoid; 
+  }
+  div.output { 
+    display: block;
+    page-break-inside: avoid; 
+  }
+}
+</style>
+
+<!-- Custom stylesheet, it must be in the same directory as the html file -->
+<link rel="stylesheet" href="notebook.css">
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script></head>
+<body>
+  <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+    <a href="../../../../../../index.html"><img src="../../../../../../pv_it.png" alt="logo" style="width:50px;float:left;position:absolute"></a> 
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Proof-of-proveit.logic.boolean.disjunction.destructiveDilemma-theorem">Proof of <a class="ProveItLink" href="../../../../_context_.html">proveit</a>.<a class="ProveItLink" href="../../../_context_.html">logic</a>.<a class="ProveItLink" href="../../_context_.html">boolean</a>.<a class="ProveItLink" href="../_context_.html">disjunction</a>.<a class="ProveItLink" href="../_theorems_.html#destructiveDilemma">destructiveDilemma</a> theorem<a class="anchor-link" href="#Proof-of-proveit.logic.boolean.disjunction.destructiveDilemma-theorem">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">proveit</span>
+<span class="kn">from</span> <span class="nn">proveit</span> <span class="kn">import</span> <span class="n">defaults</span>
+<span class="kn">from</span> <span class="nn">proveit._common_</span> <span class="kn">import</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">D</span>
+<span class="kn">from</span> <span class="nn">proveit.logic</span> <span class="kn">import</span> <span class="n">Implies</span><span class="p">,</span> <span class="n">Not</span><span class="p">,</span> <span class="n">Or</span>
+<span class="n">context</span> <span class="o">=</span> <span class="n">proveit</span><span class="o">.</span><span class="n">Context</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">)</span> <span class="c1"># the theorem&#39;s context is in the parent directory</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">proving</span> destructiveDilemma presuming [proveit.logic.boolean.implication.toContraposition, proveit.logic.boolean.negation.closure]
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Beginning proof of destructiveDilemma
+Recorded &#39;presuming&#39; information
+Presuming proveit.logic.boolean.conjunction.andIfBoth, proveit.logic.boolean.disjunction.falseOrTrue, proveit.logic.boolean.disjunction.trueOrFalse, proveit.logic.boolean.falseInBool, proveit.logic.boolean.foldForallOverBool, proveit.logic.boolean.implication.toContraposition, proveit.logic.boolean.negation.closure, proveit.logic.boolean.trueInBool, proveit.logic.equality.subLeftSideInto, proveit.logic.equality.unfoldNotEquals theorem(s) (and any of their dependencies).
+Presuming previous theorem(s) in this context (and any of their dependencies).
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[2]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="destructiveDilemma">destructiveDilemma:</strong> <a class="ProveItLink" href="../__pv_it/e8d36dad2d649e079c55688242b19f33eb55dc1d0/expr.html"><img src="../__pv_it/e8d36dad2d649e079c55688242b19f33eb55dc1d0/expr.png" style="display:inline;vertical-align:middle;" /></a><br>(see <a class="ProveItLink" href="../__pv_it/e8d36dad2d649e079c55688242b19f33eb55dc1d0/dependencies.html">dependencies</a>)<br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Prove by applying the <strong>constructiveDilemma</strong> after taking contraposing $A \Rightarrow C$ to $\lnot C \Rightarrow \lnot A$ and $B \Rightarrow D$ to $\lnot D \Rightarrow \lnot B$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">defaults</span><span class="o">.</span><span class="n">assumptions</span> <span class="o">=</span> <span class="n">destructiveDilemma</span><span class="o">.</span><span class="n">conditions</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="defaults.assumptions">defaults.assumptions:</strong> <a class="ProveItLink" href="../__pv_it/8a7ad9d60a768176994f97bf142d2698bae5b8700/expr.html"><img src="../__pv_it/8a7ad9d60a768176994f97bf142d2698bae5b8700/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Implies</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span><span class="o">.</span><span class="n">contrapose</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[4]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/0c485fe863ad9649fcea97cb7f4e89dcff9cd22d0/expr.html"><img src="../__pv_it/0c485fe863ad9649fcea97cb7f4e89dcff9cd22d0/expr.png" style="display:inline;vertical-align:middle;" /></a> &#x22A2;&nbsp;<a class="ProveItLink" href="../__pv_it/2de53d7760b3873cfb95f0ce3f0cbc5a9d6a626f0/expr.html"><img src="../__pv_it/2de53d7760b3873cfb95f0ce3f0cbc5a9d6a626f0/expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Implies</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span><span class="o">.</span><span class="n">contrapose</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[5]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/659ee4bbeb9b8ae59b14260d9f7130b8aca616110/expr.html"><img src="../__pv_it/659ee4bbeb9b8ae59b14260d9f7130b8aca616110/expr.png" style="display:inline;vertical-align:middle;" /></a> &#x22A2;&nbsp;<a class="ProveItLink" href="../__pv_it/c0c9586b1fb70055e21681815c37742fe72c2b0e0/expr.html"><img src="../__pv_it/c0c9586b1fb70055e21681815c37742fe72c2b0e0/expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Or</span><span class="p">(</span><span class="n">Not</span><span class="p">(</span><span class="n">C</span><span class="p">),</span> <span class="n">Not</span><span class="p">(</span><span class="n">D</span><span class="p">))</span><span class="o">.</span><span class="n">deriveViaMultiDilemma</span><span class="p">(</span><span class="n">Or</span><span class="p">(</span><span class="n">Not</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="n">Not</span><span class="p">(</span><span class="n">B</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[6]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/6cc142c147131343bfb6d8e6f0f1bf5795b5e2270/expr.html"><img src="../__pv_it/6cc142c147131343bfb6d8e6f0f1bf5795b5e2270/expr.png" style="display:inline;vertical-align:middle;" /></a> &#x22A2;&nbsp;<a class="ProveItLink" href="../__pv_it/1b19a969c9911b580a2875ed233a999108eb89630/expr.html"><img src="../__pv_it/1b19a969c9911b580a2875ed233a999108eb89630/expr.png" style="display:inline;vertical-align:middle;" /></a></span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">qed</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[7]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<table><tr><th>&nbsp;</th><th>step type</th><th>requirements</th><th>statement</th></tr>
+<tr><td>0</td><td>generalizaton</td><td>1</td><td><span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="../__pv_it/e8d36dad2d649e079c55688242b19f33eb55dc1d0/expr.html"><img src="../__pv_it/e8d36dad2d649e079c55688242b19f33eb55dc1d0/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr>
+<tr><td>1</td><td>specialization</td><td>2, 3, 4, 5, 6, 7, 8, 9</td><td><span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/6cc142c147131343bfb6d8e6f0f1bf5795b5e2270/expr.html"><img src="../__pv_it/6cc142c147131343bfb6d8e6f0f1bf5795b5e2270/expr.png" style="display:inline;vertical-align:middle;" /></a> &#x22A2;&nbsp;<a class="ProveItLink" href="../__pv_it/1b19a969c9911b580a2875ed233a999108eb89630/expr.html"><img src="../__pv_it/1b19a969c9911b580a2875ed233a999108eb89630/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr>
+<tr><td>&nbsp;</td><td colspan=4 style="text-align:left"><span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/2d112cd6a731878806bcd05a6ff80000608919090/expr.html"><img src="../__pv_it/2d112cd6a731878806bcd05a6ff80000608919090/expr.png" style="display:inline;vertical-align:middle;" /></a>, <a class="ProveItLink" href="../__pv_it/7bce1b1d7a2896a0709653acd674bb46b5ae30070/expr.html"><img src="../__pv_it/7bce1b1d7a2896a0709653acd674bb46b5ae30070/expr.png" style="display:inline;vertical-align:middle;" /></a>, <a class="ProveItLink" href="../__pv_it/57bd8389f2e6b0e8b44eec6c76b2dc3862d66bf30/expr.html"><img src="../__pv_it/57bd8389f2e6b0e8b44eec6c76b2dc3862d66bf30/expr.png" style="display:inline;vertical-align:middle;" /></a>, <a class="ProveItLink" href="../__pv_it/f3b3c5d0954e79d19c5a0a268de0cc12680ed7e90/expr.html"><img src="../__pv_it/f3b3c5d0954e79d19c5a0a268de0cc12680ed7e90/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr><tr><td>2</td><td>theorem</td><td></td><td><span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="../__pv_it/9a082ebbf13415ad7005d8649b68a4c58660aa360/expr.html"><img src="../__pv_it/9a082ebbf13415ad7005d8649b68a4c58660aa360/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr>
+<tr><td>&nbsp;</td><td colspan=4 style-"text-align:left"><a class="ProveItLink" href="constructiveDilemma.html">proveit.logic.boolean.disjunction.constructiveDilemma</a></td></tr><tr><td>3</td><td>specialization</td><td>12, 10</td><td><span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/549ecf82a9d4ac5ca0750c6c3aaf83e6e7209ca90/expr.html"><img src="../__pv_it/549ecf82a9d4ac5ca0750c6c3aaf83e6e7209ca90/expr.png" style="display:inline;vertical-align:middle;" /></a> &#x22A2;&nbsp;<a class="ProveItLink" href="../__pv_it/c948abda081fd2d691427bf4804da2a83b7eea690/expr.html"><img src="../__pv_it/c948abda081fd2d691427bf4804da2a83b7eea690/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr>
+<tr><td>&nbsp;</td><td colspan=4 style="text-align:left"><span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/fd15fc16e9d539ce9fb9767fdfdc4ccdf88f3a7e0/expr.html"><img src="../__pv_it/fd15fc16e9d539ce9fb9767fdfdc4ccdf88f3a7e0/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr><tr><td>4</td><td>specialization</td><td>12, 11</td><td><span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/aa3618fdfba9edc866f19a2dbc2f7cde292ff1c70/expr.html"><img src="../__pv_it/aa3618fdfba9edc866f19a2dbc2f7cde292ff1c70/expr.png" style="display:inline;vertical-align:middle;" /></a> &#x22A2;&nbsp;<a class="ProveItLink" href="../__pv_it/aa6fad91cfe735137d2bf737ed5cb82fc75df3860/expr.html"><img src="../__pv_it/aa6fad91cfe735137d2bf737ed5cb82fc75df3860/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr>
+<tr><td>&nbsp;</td><td colspan=4 style="text-align:left"><span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/a0ca7c381d1a18bf752cb739b05eb87de4080a3f0/expr.html"><img src="../__pv_it/a0ca7c381d1a18bf752cb739b05eb87de4080a3f0/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr><tr><td>5</td><td>specialization</td><td>12, 14</td><td><span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/017ca8cfa034181c90ba15dd10869f0f4e516d6a0/expr.html"><img src="../__pv_it/017ca8cfa034181c90ba15dd10869f0f4e516d6a0/expr.png" style="display:inline;vertical-align:middle;" /></a> &#x22A2;&nbsp;<a class="ProveItLink" href="../__pv_it/986d2e7ca8eb67a3fbf4b28f256b01dbf875a3f20/expr.html"><img src="../__pv_it/986d2e7ca8eb67a3fbf4b28f256b01dbf875a3f20/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr>
+<tr><td>&nbsp;</td><td colspan=4 style="text-align:left"><span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/e2ee195baea449ecf67452694c66cbd67b2c19580/expr.html"><img src="../__pv_it/e2ee195baea449ecf67452694c66cbd67b2c19580/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr><tr><td>6</td><td>specialization</td><td>12, 17</td><td><span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/2c2e947402f53b9e11cd7769e1b5b3378595750e0/expr.html"><img src="../__pv_it/2c2e947402f53b9e11cd7769e1b5b3378595750e0/expr.png" style="display:inline;vertical-align:middle;" /></a> &#x22A2;&nbsp;<a class="ProveItLink" href="../__pv_it/f0c1dc06e1a7b006dbd5157d3bcf74367cd341560/expr.html"><img src="../__pv_it/f0c1dc06e1a7b006dbd5157d3bcf74367cd341560/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr>
+<tr><td>&nbsp;</td><td colspan=4 style="text-align:left"><span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/788ef5511dfca54206679fdb7d1131e45dc4c3d50/expr.html"><img src="../__pv_it/788ef5511dfca54206679fdb7d1131e45dc4c3d50/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr><tr><td>7</td><td>assumption</td><td></td><td><span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/8227ec18f973fcbf83c9e0e2242ca7ce2d2cc1f10/expr.html"><img src="../__pv_it/8227ec18f973fcbf83c9e0e2242ca7ce2d2cc1f10/expr.png" style="display:inline;vertical-align:middle;" /></a> &#x22A2;&nbsp;<a class="ProveItLink" href="../__pv_it/b0c52592c5c7a00624ff38aeefd4d74e5e15155c0/expr.html"><img src="../__pv_it/b0c52592c5c7a00624ff38aeefd4d74e5e15155c0/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr>
+<tr><td>8</td><td>specialization</td><td>15, 13, 14</td><td><span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/0c485fe863ad9649fcea97cb7f4e89dcff9cd22d0/expr.html"><img src="../__pv_it/0c485fe863ad9649fcea97cb7f4e89dcff9cd22d0/expr.png" style="display:inline;vertical-align:middle;" /></a> &#x22A2;&nbsp;<a class="ProveItLink" href="../__pv_it/2de53d7760b3873cfb95f0ce3f0cbc5a9d6a626f0/expr.html"><img src="../__pv_it/2de53d7760b3873cfb95f0ce3f0cbc5a9d6a626f0/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr>
+<tr><td>&nbsp;</td><td colspan=4 style="text-align:left"><span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/e2ee195baea449ecf67452694c66cbd67b2c19580/expr.html"><img src="../__pv_it/e2ee195baea449ecf67452694c66cbd67b2c19580/expr.png" style="display:inline;vertical-align:middle;" /></a>, <a class="ProveItLink" href="../__pv_it/980e1b45d0249a0ec2ea73c3cc60691f9afcb8530/expr.html"><img src="../__pv_it/980e1b45d0249a0ec2ea73c3cc60691f9afcb8530/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr><tr><td>9</td><td>specialization</td><td>15, 16, 17</td><td><span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/659ee4bbeb9b8ae59b14260d9f7130b8aca616110/expr.html"><img src="../__pv_it/659ee4bbeb9b8ae59b14260d9f7130b8aca616110/expr.png" style="display:inline;vertical-align:middle;" /></a> &#x22A2;&nbsp;<a class="ProveItLink" href="../__pv_it/c0c9586b1fb70055e21681815c37742fe72c2b0e0/expr.html"><img src="../__pv_it/c0c9586b1fb70055e21681815c37742fe72c2b0e0/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr>
+<tr><td>&nbsp;</td><td colspan=4 style="text-align:left"><span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/788ef5511dfca54206679fdb7d1131e45dc4c3d50/expr.html"><img src="../__pv_it/788ef5511dfca54206679fdb7d1131e45dc4c3d50/expr.png" style="display:inline;vertical-align:middle;" /></a>, <a class="ProveItLink" href="../__pv_it/9565a1c5c6f2fb644921f1bf1782bf14142eeee00/expr.html"><img src="../__pv_it/9565a1c5c6f2fb644921f1bf1782bf14142eeee00/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr><tr><td>10</td><td>assumption</td><td></td><td><span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/549ecf82a9d4ac5ca0750c6c3aaf83e6e7209ca90/expr.html"><img src="../__pv_it/549ecf82a9d4ac5ca0750c6c3aaf83e6e7209ca90/expr.png" style="display:inline;vertical-align:middle;" /></a> &#x22A2;&nbsp;<a class="ProveItLink" href="../__pv_it/2cec3c732aceb253233bb533d4e43cc3f34f4f660/expr.html"><img src="../__pv_it/2cec3c732aceb253233bb533d4e43cc3f34f4f660/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr>
+<tr><td>11</td><td>assumption</td><td></td><td><span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/aa3618fdfba9edc866f19a2dbc2f7cde292ff1c70/expr.html"><img src="../__pv_it/aa3618fdfba9edc866f19a2dbc2f7cde292ff1c70/expr.png" style="display:inline;vertical-align:middle;" /></a> &#x22A2;&nbsp;<a class="ProveItLink" href="../__pv_it/3891b823dfb55f51d513cc7144556dc1bfd425b70/expr.html"><img src="../__pv_it/3891b823dfb55f51d513cc7144556dc1bfd425b70/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr>
+<tr><td>12</td><td>theorem</td><td></td><td><span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="../../negation/__pv_it/2bf039a75462a829870dcf59b07f81bfb03962800/expr.html"><img src="../../negation/__pv_it/2bf039a75462a829870dcf59b07f81bfb03962800/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr>
+<tr><td>&nbsp;</td><td colspan=4 style-"text-align:left"><a class="ProveItLink" href="../../negation/_proofs_/closure.html">proveit.logic.boolean.negation.closure</a></td></tr><tr><td>13</td><td>assumption</td><td></td><td><span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/2b397a206fb82d71f2761db12bdc37b0a3e181fb0/expr.html"><img src="../__pv_it/2b397a206fb82d71f2761db12bdc37b0a3e181fb0/expr.png" style="display:inline;vertical-align:middle;" /></a> &#x22A2;&nbsp;<a class="ProveItLink" href="../__pv_it/331937d6d92fa85ce5f21643895017d27da16a970/expr.html"><img src="../__pv_it/331937d6d92fa85ce5f21643895017d27da16a970/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr>
+<tr><td>14</td><td>assumption</td><td></td><td><span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/017ca8cfa034181c90ba15dd10869f0f4e516d6a0/expr.html"><img src="../__pv_it/017ca8cfa034181c90ba15dd10869f0f4e516d6a0/expr.png" style="display:inline;vertical-align:middle;" /></a> &#x22A2;&nbsp;<a class="ProveItLink" href="../__pv_it/03a5c2b5cc6fc2c3cd686b4bcf84379b893abe210/expr.html"><img src="../__pv_it/03a5c2b5cc6fc2c3cd686b4bcf84379b893abe210/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr>
+<tr><td>15</td><td>theorem</td><td></td><td><span style="font-size:20px;"> &#x22A2;&nbsp;<a class="ProveItLink" href="../../implication/__pv_it/59ee696d90b8b4355ef659894d5508d5e5d744fb0/expr.html"><img src="../../implication/__pv_it/59ee696d90b8b4355ef659894d5508d5e5d744fb0/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr>
+<tr><td>&nbsp;</td><td colspan=4 style-"text-align:left"><a class="ProveItLink" href="../../implication/_proofs_/toContraposition.html">proveit.logic.boolean.implication.toContraposition</a></td></tr><tr><td>16</td><td>assumption</td><td></td><td><span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/f1fac65ccef659fc47c1aac0e164213c40a2efaa0/expr.html"><img src="../__pv_it/f1fac65ccef659fc47c1aac0e164213c40a2efaa0/expr.png" style="display:inline;vertical-align:middle;" /></a> &#x22A2;&nbsp;<a class="ProveItLink" href="../__pv_it/e3af43a0b7e250c3bd7b23616149288dd724e8c10/expr.html"><img src="../__pv_it/e3af43a0b7e250c3bd7b23616149288dd724e8c10/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr>
+<tr><td>17</td><td>assumption</td><td></td><td><span style="font-size:20px;"><a class="ProveItLink" href="../__pv_it/2c2e947402f53b9e11cd7769e1b5b3378595750e0/expr.html"><img src="../__pv_it/2c2e947402f53b9e11cd7769e1b5b3378595750e0/expr.png" style="display:inline;vertical-align:middle;" /></a> &#x22A2;&nbsp;<a class="ProveItLink" href="../__pv_it/fe5c91c77f0659f9ea07a2e3257797875d6868370/expr.html"><img src="../__pv_it/fe5c91c77f0659f9ea07a2e3257797875d6868370/expr.png" style="display:inline;vertical-align:middle;" /></a></span></td></tr>
+</table>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+<footer>
+  <p>These web pages were generated on 2018-12-08 by <a href="https://github.com/PyProveIt/Prove-It">Prove-It</a> Beta Version 0.3, licensed under the GNU Public License by Sandia Corporation.</p>
+  <p>Presented proofs are not absolutely guaranteed.  For assurance, it is important to check the structure 
+  of the statement being proven, independently verify the derivation steps, track dependencies, and ensure that 
+  employed axioms are valid and properly structured.  Inconsistencies may exist, unknowingly, in this system.
+  </p>
+  <p>
+  This material is based upon work supported by the U.S. Department of Energy, Office of Science, Office of Advanced Scientific Computing Research, under the Quantum Computing Application Teams program. Sandia National Labs is managed and operated by National Technology and Engineering Solutions of Sandia, LLC, a subsidiary of Honeywell International, Inc., for the U.S. Dept. of Energy's NNSA under contract DE-NA0003525. The views expressed above do not necessarily represent the views of the DOE or the U.S. Government.
+  </p>
+  <br>
+  <p>Please send questions/comments to: <a href="mailto:wwitzel@sandia.gov">
+  wwitzel@sandia.gov</a>.</p>
+</footer> 
+</body>
+
+ 
+
+
+</html>

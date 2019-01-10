@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+<title>Common expressions for context proveit.logic</title>
+
+<style type="text/css">
+/* Overrides of notebook CSS for static HTML export */
+body {
+  overflow: visible;
+  padding: 8px;
+}
+div#notebook {
+  overflow: visible;
+  border-top: none;
+}@media print {
+  div.cell {
+    display: block;
+    page-break-inside: avoid;
+  } 
+  div.output_wrapper { 
+    display: block;
+    page-break-inside: avoid; 
+  }
+  div.output { 
+    display: block;
+    page-break-inside: avoid; 
+  }
+}
+</style>
+
+<!-- Custom stylesheet, it must be in the same directory as the html file -->
+<link rel="stylesheet" href="notebook.css">
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script></head>
+<body>
+  <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+    <a href="../../../index.html"><img src="../../../pv_it.png" alt="logo" style="width:50px;float:left;position:absolute"></a> 
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Common-expressions-for-context-proveit.logic">Common expressions for context <a class="ProveItLink" href="_context_.html">proveit.logic</a><a class="anchor-link" href="#Common-expressions-for-context-proveit.logic">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">proveit</span>
+<span class="kn">from</span> <span class="nn">proveit</span> <span class="kn">import</span> <span class="n">Lambda</span><span class="p">,</span> <span class="n">Iter</span><span class="p">,</span> <span class="n">Indexed</span><span class="p">,</span> <span class="n">varIter</span><span class="p">,</span> <span class="n">Function</span>
+<span class="kn">from</span> <span class="nn">proveit._common_</span> <span class="kn">import</span> <span class="n">f</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">xx</span><span class="p">,</span> <span class="n">yy</span><span class="p">,</span> <span class="n">zz</span>
+<span class="kn">from</span> <span class="nn">proveit._common_</span> <span class="kn">import</span> <span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">,</span> <span class="n">AA</span><span class="p">,</span> <span class="n">BB</span><span class="p">,</span> <span class="n">CC</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">QQ</span><span class="p">,</span> <span class="n">RR</span><span class="p">,</span> <span class="n">fx</span><span class="p">,</span> <span class="n">gx</span>
+<span class="kn">from</span> <span class="nn">proveit.logic</span> <span class="kn">import</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">,</span> <span class="n">Implies</span><span class="p">,</span> <span class="n">Equals</span>
+<span class="kn">from</span> <span class="nn">proveit.number</span> <span class="kn">import</span> <span class="n">one</span><span class="p">,</span> <span class="n">Len</span>
+<span class="o">%</span><span class="k">begin</span> common
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Defining common sub-expressions for context &#39;proveit.logic&#39;
+Subsequent end-of-cell assignments will define common sub-expressions
+%end_common will finalize the definitions
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">proveit</span> <span class="kn">import</span> <span class="n">Variable</span>
+<span class="n">Variable</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[2]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>proveit._core_.expression.label.var.Variable</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">proveit</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">proveit</span><span class="o">.</span><span class="n">__path__</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;/home/wwitzel/Prove-It/packages/proveit&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">proveit._common_</span> <span class="kn">import</span> <span class="n">fx</span><span class="c1">#, gx</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">iterA1m</span> <span class="o">=</span> <span class="n">varIter</span><span class="p">(</span><span class="n">AA</span><span class="p">,</span> <span class="n">one</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[6]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="iterA1m">iterA1m:</strong> <a class="ProveItLink" href="__pv_it/2e9aa6c924119d1f728345d54c0f04c0238931150/expr.html"><img src="__pv_it/2e9aa6c924119d1f728345d54c0f04c0238931150/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">iterB1n</span> <span class="o">=</span> <span class="n">varIter</span><span class="p">(</span><span class="n">BB</span><span class="p">,</span> <span class="n">one</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[7]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="iterB1n">iterB1n:</strong> <a class="ProveItLink" href="__pv_it/5119aa9b5431a1c0753b95d669e5eac67b2d10800/expr.html"><img src="__pv_it/5119aa9b5431a1c0753b95d669e5eac67b2d10800/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">iterC1n</span> <span class="o">=</span> <span class="n">varIter</span><span class="p">(</span><span class="n">CC</span><span class="p">,</span> <span class="n">one</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[8]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="iterC1n">iterC1n:</strong> <a class="ProveItLink" href="__pv_it/10115199ec0c9a4c56655748bea359a8c12a79f10/expr.html"><img src="__pv_it/10115199ec0c9a4c56655748bea359a8c12a79f10/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">xIter1l</span> <span class="o">=</span> <span class="n">varIter</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">one</span><span class="p">,</span> <span class="n">l</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[9]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="xIter1l">xIter1l:</strong> <a class="ProveItLink" href="__pv_it/cda09be9fb56399bf1f80f0580afccc60604e66d0/expr.html"><img src="__pv_it/cda09be9fb56399bf1f80f0580afccc60604e66d0/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">xIter1n</span> <span class="o">=</span> <span class="n">varIter</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">one</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[10]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="xIter1n">xIter1n:</strong> <a class="ProveItLink" href="__pv_it/64f385c279d2182b834cc97e315e3e8ec098b01c0/expr.html"><img src="__pv_it/64f385c279d2182b834cc97e315e3e8ec098b01c0/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">yIter1l</span> <span class="o">=</span> <span class="n">varIter</span><span class="p">(</span><span class="n">yy</span><span class="p">,</span> <span class="n">one</span><span class="p">,</span> <span class="n">l</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[11]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="yIter1l">yIter1l:</strong> <a class="ProveItLink" href="__pv_it/18f25e3132b0f0b6f4ded25e06b0fa5238f2acff0/expr.html"><img src="__pv_it/18f25e3132b0f0b6f4ded25e06b0fa5238f2acff0/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">yIter1n</span> <span class="o">=</span> <span class="n">varIter</span><span class="p">(</span><span class="n">yy</span><span class="p">,</span> <span class="n">one</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[12]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="yIter1n">yIter1n:</strong> <a class="ProveItLink" href="__pv_it/7166ee77ec18f9c20efffcc9951879b903744e1f0/expr.html"><img src="__pv_it/7166ee77ec18f9c20efffcc9951879b903744e1f0/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">zIter1l</span> <span class="o">=</span> <span class="n">varIter</span><span class="p">(</span><span class="n">zz</span><span class="p">,</span> <span class="n">one</span><span class="p">,</span> <span class="n">l</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[13]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="zIter1l">zIter1l:</strong> <a class="ProveItLink" href="__pv_it/6eee87698d64f00f3131212a448d8b9f7a2d2c930/expr.html"><img src="__pv_it/6eee87698d64f00f3131212a448d8b9f7a2d2c930/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">f_xIter1l</span> <span class="o">=</span> <span class="n">Function</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">xIter1l</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[14]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="f_xIter1l">f_xIter1l:</strong> <a class="ProveItLink" href="__pv_it/4fc76e2964e62b2ebf13fed65a433c0b931f4fe30/expr.html"><img src="__pv_it/4fc76e2964e62b2ebf13fed65a433c0b931f4fe30/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">f_yIter1l</span> <span class="o">=</span> <span class="n">Function</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">yIter1l</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[15]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="f_yIter1l">f_yIter1l:</strong> <a class="ProveItLink" href="__pv_it/deccbdff45e6319db30a9796c973e69915990f770/expr.html"><img src="__pv_it/deccbdff45e6319db30a9796c973e69915990f770/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">f_zIter1l</span> <span class="o">=</span> <span class="n">Function</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">zIter1l</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[16]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="f_zIter1l">f_zIter1l:</strong> <a class="ProveItLink" href="__pv_it/446b2d073c8871fb12420c6dc7c3132dc5dd21600/expr.html"><img src="__pv_it/446b2d073c8871fb12420c6dc7c3132dc5dd21600/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">g_xIter1l</span> <span class="o">=</span> <span class="n">Function</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">xIter1l</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[17]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="g_xIter1l">g_xIter1l:</strong> <a class="ProveItLink" href="__pv_it/7e931f4b05b5f4f9726729c53d410d6b65a538810/expr.html"><img src="__pv_it/7e931f4b05b5f4f9726729c53d410d6b65a538810/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">g_yIter1l</span> <span class="o">=</span> <span class="n">Function</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">yIter1l</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[18]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="g_yIter1l">g_yIter1l:</strong> <a class="ProveItLink" href="__pv_it/6eee13ef228d587baede44533154da5000f7817e0/expr.html"><img src="__pv_it/6eee13ef228d587baede44533154da5000f7817e0/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">g_zIter1l</span> <span class="o">=</span> <span class="n">Function</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">zIter1l</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[19]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="g_zIter1l">g_zIter1l:</strong> <a class="ProveItLink" href="__pv_it/1c8633d38f68d9a084fcd81c47e3e2a43dc741810/expr.html"><img src="__pv_it/1c8633d38f68d9a084fcd81c47e3e2a43dc741810/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">fx_eq_gx</span> <span class="o">=</span> <span class="n">Equals</span><span class="p">(</span><span class="n">fx</span><span class="p">,</span> <span class="n">gx</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[20]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="fx_eq_gx">fx_eq_gx:</strong> <a class="ProveItLink" href="__pv_it/f6320177a0d686efe3cd35bece66186b4096c5fb0/expr.html"><img src="__pv_it/f6320177a0d686efe3cd35bece66186b4096c5fb0/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">PofTrue</span> <span class="o">=</span> <span class="n">Function</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">TRUE</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[21]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="PofTrue">PofTrue:</strong> <a class="ProveItLink" href="__pv_it/e620067e5fc1a01f6e7ce2f053b97db25219d34a0/expr.html"><img src="__pv_it/e620067e5fc1a01f6e7ce2f053b97db25219d34a0/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">PofFalse</span> <span class="o">=</span> <span class="n">Function</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[22]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="PofFalse">PofFalse:</strong> <a class="ProveItLink" href="__pv_it/4d7c4165a9fdb279e98a557bae75d7e45eb1c31a0/expr.html"><img src="__pv_it/4d7c4165a9fdb279e98a557bae75d7e45eb1c31a0/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">QimplPofTrue</span> <span class="o">=</span> <span class="n">Implies</span><span class="p">(</span><span class="n">Function</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">TRUE</span><span class="p">),</span> <span class="n">PofTrue</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[23]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="QimplPofTrue">QimplPofTrue:</strong> <a class="ProveItLink" href="__pv_it/c23bff255c761f01e52a091ba3f1fdf4285d319a0/expr.html"><img src="__pv_it/c23bff255c761f01e52a091ba3f1fdf4285d319a0/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">QimplPofFalse</span> <span class="o">=</span> <span class="n">Implies</span><span class="p">(</span><span class="n">Function</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">),</span> <span class="n">PofFalse</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[24]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="QimplPofFalse">QimplPofFalse:</strong> <a class="ProveItLink" href="__pv_it/1d123c26ccfeb4cf8fca953853d9541ba3d4e4650/expr.html"><img src="__pv_it/1d123c26ccfeb4cf8fca953853d9541ba3d4e4650/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">P_xIter1l</span> <span class="o">=</span> <span class="n">Function</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">xIter1l</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[25]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="P_xIter1l">P_xIter1l:</strong> <a class="ProveItLink" href="__pv_it/62a77a934dd27b6bae6d647906f5ad3f7d57b97a0/expr.html"><img src="__pv_it/62a77a934dd27b6bae6d647906f5ad3f7d57b97a0/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">P_yIter1l</span> <span class="o">=</span> <span class="n">Function</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">yIter1l</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[26]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="P_yIter1l">P_yIter1l:</strong> <a class="ProveItLink" href="__pv_it/4bffa72e7f85729fd09ca9241e450dcce47928b80/expr.html"><img src="__pv_it/4bffa72e7f85729fd09ca9241e450dcce47928b80/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">P_xIter1l_y</span> <span class="o">=</span> <span class="n">Function</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="p">[</span><span class="n">xIter1l</span><span class="p">,</span> <span class="n">y</span><span class="p">])</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[27]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="P_xIter1l_y">P_xIter1l_y:</strong> <a class="ProveItLink" href="__pv_it/f79efa0f56c0ed33455f96b205328544e9b64b7e0/expr.html"><img src="__pv_it/f79efa0f56c0ed33455f96b205328544e9b64b7e0/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">P_xIter1l_yIter1n</span> <span class="o">=</span> <span class="n">Function</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="p">[</span><span class="n">xIter1l</span><span class="p">,</span> <span class="n">yIter1n</span><span class="p">])</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[28]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="P_xIter1l_yIter1n">P_xIter1l_yIter1n:</strong> <a class="ProveItLink" href="__pv_it/768003ccea3e1b8eea1c7de5090830fbe69f23640/expr.html"><img src="__pv_it/768003ccea3e1b8eea1c7de5090830fbe69f23640/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">iterQ1k</span> <span class="o">=</span> <span class="n">varIter</span><span class="p">(</span><span class="n">QQ</span><span class="p">,</span> <span class="n">one</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[29]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="iterQ1k">iterQ1k:</strong> <a class="ProveItLink" href="__pv_it/bdfc75ba6f54bef44aaddf724081b21c22c14a7a0/expr.html"><img src="__pv_it/bdfc75ba6f54bef44aaddf724081b21c22c14a7a0/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">iterQ1k_x</span> <span class="o">=</span> <span class="n">Iter</span><span class="p">(</span><span class="n">Lambda</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">Function</span><span class="p">(</span><span class="n">Indexed</span><span class="p">(</span><span class="n">QQ</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">x</span><span class="p">)),</span> <span class="n">one</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[30]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="iterQ1k_x">iterQ1k_x:</strong> <a class="ProveItLink" href="__pv_it/7a0c8a10fbbb5bf2f3422a125254b1d9320baa730/expr.html"><img src="__pv_it/7a0c8a10fbbb5bf2f3422a125254b1d9320baa730/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">iterQ1k_y</span> <span class="o">=</span> <span class="n">Iter</span><span class="p">(</span><span class="n">Lambda</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">Function</span><span class="p">(</span><span class="n">Indexed</span><span class="p">(</span><span class="n">QQ</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">y</span><span class="p">)),</span> <span class="n">one</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[31]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="iterQ1k_y">iterQ1k_y:</strong> <a class="ProveItLink" href="__pv_it/c60e4349575d557e55a903038fa30f09bdf72b6b0/expr.html"><img src="__pv_it/c60e4349575d557e55a903038fa30f09bdf72b6b0/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">iterQ1k_xIter1l</span> <span class="o">=</span> <span class="n">Iter</span><span class="p">(</span><span class="n">Lambda</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">Function</span><span class="p">(</span><span class="n">Indexed</span><span class="p">(</span><span class="n">QQ</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">xIter1l</span><span class="p">)),</span> <span class="n">one</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[32]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="iterQ1k_xIter1l">iterQ1k_xIter1l:</strong> <a class="ProveItLink" href="__pv_it/d2205ec8a332c5cc35d508435c56b7fa9b58d6470/expr.html"><img src="__pv_it/d2205ec8a332c5cc35d508435c56b7fa9b58d6470/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">iterQ1i_xIter1l</span> <span class="o">=</span> <span class="n">Iter</span><span class="p">(</span><span class="n">Lambda</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">Function</span><span class="p">(</span><span class="n">Indexed</span><span class="p">(</span><span class="n">QQ</span><span class="p">,</span> <span class="n">j</span><span class="p">),</span> <span class="n">xIter1l</span><span class="p">)),</span> <span class="n">one</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[33]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="iterQ1i_xIter1l">iterQ1i_xIter1l:</strong> <a class="ProveItLink" href="__pv_it/5e9dce21c520112916b0866d7bcde1a55313f7110/expr.html"><img src="__pv_it/5e9dce21c520112916b0866d7bcde1a55313f7110/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">iterQjk_xIter1l</span> <span class="o">=</span> <span class="n">Iter</span><span class="p">(</span><span class="n">Lambda</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">Function</span><span class="p">(</span><span class="n">Indexed</span><span class="p">(</span><span class="n">QQ</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">xIter1l</span><span class="p">)),</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[34]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="iterQjk_xIter1l">iterQjk_xIter1l:</strong> <a class="ProveItLink" href="__pv_it/371ac5af8a55f7d6b2144f505f005b73d74b3eb40/expr.html"><img src="__pv_it/371ac5af8a55f7d6b2144f505f005b73d74b3eb40/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">iterQ1k_yIter1l</span> <span class="o">=</span> <span class="n">Iter</span><span class="p">(</span><span class="n">Lambda</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">Function</span><span class="p">(</span><span class="n">Indexed</span><span class="p">(</span><span class="n">QQ</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">yIter1l</span><span class="p">)),</span> <span class="n">one</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[35]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="iterQ1k_yIter1l">iterQ1k_yIter1l:</strong> <a class="ProveItLink" href="__pv_it/fd7489e449028a419352f7c45a72211ce75effb90/expr.html"><img src="__pv_it/fd7489e449028a419352f7c45a72211ce75effb90/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">iterQ1k_zIter1l</span> <span class="o">=</span> <span class="n">Iter</span><span class="p">(</span><span class="n">Lambda</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">Function</span><span class="p">(</span><span class="n">Indexed</span><span class="p">(</span><span class="n">QQ</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">zIter1l</span><span class="p">)),</span> <span class="n">one</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[36]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="iterQ1k_zIter1l">iterQ1k_zIter1l:</strong> <a class="ProveItLink" href="__pv_it/e3f63f210afe49f1819999507f80a40d159f34580/expr.html"><img src="__pv_it/e3f63f210afe49f1819999507f80a40d159f34580/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">iterQ1k_xIter1l_y</span> <span class="o">=</span> <span class="n">Iter</span><span class="p">(</span><span class="n">Lambda</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">Function</span><span class="p">(</span><span class="n">Indexed</span><span class="p">(</span><span class="n">QQ</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="p">[</span><span class="n">xIter1l</span><span class="p">,</span> <span class="n">y</span><span class="p">])),</span> <span class="n">one</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[37]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="iterQ1k_xIter1l_y">iterQ1k_xIter1l_y:</strong> <a class="ProveItLink" href="__pv_it/dc0e8a1823c967a5244453170443bc74174c449d0/expr.html"><img src="__pv_it/dc0e8a1823c967a5244453170443bc74174c449d0/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">iterR1m</span> <span class="o">=</span> <span class="n">varIter</span><span class="p">(</span><span class="n">RR</span><span class="p">,</span> <span class="n">one</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[38]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="iterR1m">iterR1m:</strong> <a class="ProveItLink" href="__pv_it/ca7065e3efe226ff3de5cee8d4bf444b1b29f9e00/expr.html"><img src="__pv_it/ca7065e3efe226ff3de5cee8d4bf444b1b29f9e00/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">R_xIter1l</span> <span class="o">=</span> <span class="n">Function</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">xIter1l</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[39]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="R_xIter1l">R_xIter1l:</strong> <a class="ProveItLink" href="__pv_it/4c59f5075658bdbf9ee9582c31960265e1b962ec0/expr.html"><img src="__pv_it/4c59f5075658bdbf9ee9582c31960265e1b962ec0/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">R_zIter1l</span> <span class="o">=</span> <span class="n">Function</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">zIter1l</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[40]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="R_zIter1l">R_zIter1l:</strong> <a class="ProveItLink" href="__pv_it/d2f41557b249c78311ec96a3dbfcf54893b516830/expr.html"><img src="__pv_it/d2f41557b249c78311ec96a3dbfcf54893b516830/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">iterR1m_xIter1l_yIter1n</span> <span class="o">=</span> <span class="n">Iter</span><span class="p">(</span><span class="n">Lambda</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">Function</span><span class="p">(</span><span class="n">Indexed</span><span class="p">(</span><span class="n">RR</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="p">[</span><span class="n">xIter1l</span><span class="p">,</span> <span class="n">yIter1n</span><span class="p">])),</span> <span class="n">one</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[41]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="iterR1m_xIter1l_yIter1n">iterR1m_xIter1l_yIter1n:</strong> <a class="ProveItLink" href="__pv_it/95742e7fb6ca8f6762c068e084476e3834c767410/expr.html"><img src="__pv_it/95742e7fb6ca8f6762c068e084476e3834c767410/expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">end</span> common
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Common expressions may be imported from autogenerated _common_.py
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+<footer>
+  <p>These web pages were generated on 2018-12-08 by <a href="https://github.com/PyProveIt/Prove-It">Prove-It</a> Beta Version 0.3, licensed under the GNU Public License by Sandia Corporation.</p>
+  <p>Presented proofs are not absolutely guaranteed.  For assurance, it is important to check the structure 
+  of the statement being proven, independently verify the derivation steps, track dependencies, and ensure that 
+  employed axioms are valid and properly structured.  Inconsistencies may exist, unknowingly, in this system.
+  </p>
+  <p>
+  This material is based upon work supported by the U.S. Department of Energy, Office of Science, Office of Advanced Scientific Computing Research, under the Quantum Computing Application Teams program. Sandia National Labs is managed and operated by National Technology and Engineering Solutions of Sandia, LLC, a subsidiary of Honeywell International, Inc., for the U.S. Dept. of Energy's NNSA under contract DE-NA0003525. The views expressed above do not necessarily represent the views of the DOE or the U.S. Government.
+  </p>
+  <br>
+  <p>Please send questions/comments to: <a href="mailto:wwitzel@sandia.gov">
+  wwitzel@sandia.gov</a>.</p>
+</footer> 
+</body>
+
+ 
+
+
+</html>
