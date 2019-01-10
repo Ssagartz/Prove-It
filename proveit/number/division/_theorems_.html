@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+<title>Theorems for context proveit.number.division</title>
+
+<style type="text/css">
+/* Overrides of notebook CSS for static HTML export */
+body {
+  overflow: visible;
+  padding: 8px;
+}
+div#notebook {
+  overflow: visible;
+  border-top: none;
+}@media print {
+  div.cell {
+    display: block;
+    page-break-inside: avoid;
+  } 
+  div.output_wrapper { 
+    display: block;
+    page-break-inside: avoid; 
+  }
+  div.output { 
+    display: block;
+    page-break-inside: avoid; 
+  }
+}
+</style>
+
+<!-- Custom stylesheet, it must be in the same directory as the html file -->
+<link rel="stylesheet" href="notebook.css">
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script></head>
+<body>
+  <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Theorems-for-context-proveit.number.division">Theorems for context <a href="_context_.html">proveit.number.division</a><a class="anchor-link" href="#Theorems-for-context-proveit.number.division">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">proveit</span>
+<span class="c1"># the context is in the current directory:</span>
+<span class="n">context</span> <span class="o">=</span> <span class="n">proveit</span><span class="o">.</span><span class="n">Context</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span> <span class="c1"># adds context root to sys.path if necessary</span>
+<span class="kn">from</span> <span class="nn">proveit.logic</span> <span class="kn">import</span> <span class="n">Forall</span><span class="p">,</span> <span class="n">InSet</span><span class="p">,</span> <span class="n">Equals</span><span class="p">,</span> <span class="n">NotEquals</span><span class="p">,</span> <span class="n">Implies</span>
+<span class="kn">from</span> <span class="nn">proveit.number</span> <span class="kn">import</span> <span class="n">Integers</span><span class="p">,</span> <span class="n">NaturalsPos</span><span class="p">,</span> <span class="n">Reals</span><span class="p">,</span> <span class="n">RealsPos</span><span class="p">,</span> <span class="n">Complexes</span>
+<span class="kn">from</span> <span class="nn">proveit.number</span> <span class="kn">import</span> <span class="n">Div</span><span class="p">,</span> <span class="n">Frac</span><span class="p">,</span> <span class="n">Add</span><span class="p">,</span> <span class="n">Subtract</span><span class="p">,</span> <span class="n">Sum</span><span class="p">,</span> <span class="n">Mult</span><span class="p">,</span> <span class="n">Exp</span><span class="p">,</span> <span class="n">zero</span><span class="p">,</span> <span class="n">one</span>
+<span class="kn">from</span> <span class="nn">proveit._common_</span> <span class="kn">import</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">S</span> <span class="c1">#, wMulti, xMulti, yMulti, zMulti, wEtc, xEtc, yEtc, zEtc, PyEtc</span>
+<span class="kn">from</span> <span class="nn">proveit.number._common_</span> <span class="kn">import</span> <span class="n">ComplexesSansZero</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">begin</span> theorems
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Defining theorems for context &#39;proveit.number.division&#39;
+Subsequent end-of-cell assignments will define theorems
+&#39;%end theorems&#39; will finalize the definitions
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#divideRealClosure = Forall([a, b], InSet(Divide(a, b), Reals), domain=Reals, conditions=[NotEquals(b, zero)])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#divideRealPosClosure = Forall([a, b], InSet(Divide(a, b), RealsPos), domain=RealsPos, conditions=[NotEquals(b, zero)])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#fractionRealClosure = Forall([a, b], InSet(Frac(a, b), Reals), domain=Reals, conditions=[NotEquals(b, zero)])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#fractionPosClosure = Forall([a, b], InSet(Frac(a, b), RealsPos), domain=RealsPos, conditions=[NotEquals(b, zero)])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#divideComplexClosure = Forall([a, b], InSet(Divide(a, b), Complexes), domain=Complexes, conditions=[NotEquals(b, zero)])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#fractionComplexClosure = Forall([a, b], InSet(Frac(a, b), Complexes), domain=Complexes, conditions=[NotEquals(b, zero)])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">fracNotEqZero</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">([</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">],</span> <span class="n">NotEquals</span><span class="p">(</span><span class="n">Frac</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">),</span> <span class="n">zero</span><span class="p">),</span> <span class="n">domain</span><span class="o">=</span><span class="n">ComplexesSansZero</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[9]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="fracNotEqZero"><a class="ProveItLink" href="_proofs_\fracNotEqZero.html">fracNotEqZero</a>:</strong> <a class="ProveItLink" href="__pv_it\031982ac81e11d7176073bf2b3ac9a13e1b0f5710\expr.html"><img src="__pv_it\031982ac81e11d7176073bf2b3ac9a13e1b0f5710\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">fracZeroNumer</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Equals</span><span class="p">(</span><span class="n">Frac</span><span class="p">(</span><span class="n">zero</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span> <span class="n">zero</span><span class="p">),</span> <span class="n">domain</span><span class="o">=</span><span class="n">Complexes</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[10]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="fracZeroNumer"><a class="ProveItLink" href="_proofs_\fracZeroNumer.html">fracZeroNumer</a>:</strong> <a class="ProveItLink" href="__pv_it\edbd772150996374dfa71157d0b8d629742300c00\expr.html"><img src="__pv_it\edbd772150996374dfa71157d0b8d629742300c00\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">fracOneDenom</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Equals</span><span class="p">(</span><span class="n">Frac</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">one</span><span class="p">),</span> <span class="n">x</span><span class="p">),</span> <span class="n">domain</span><span class="o">=</span><span class="n">Complexes</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[11]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="fracOneDenom"><a class="ProveItLink" href="_proofs_\fracOneDenom.html">fracOneDenom</a>:</strong> <a class="ProveItLink" href="__pv_it\0a35e5b04765cd2a39c56116abd81866b5db8cae0\expr.html"><img src="__pv_it\0a35e5b04765cd2a39c56116abd81866b5db8cae0\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">distributeFractionThroughSum = Forall([xMulti, y], </span>
+<span class="sd">                                      Equals(Frac(Add(xEtc), y),</span>
+<span class="sd">                                             Add(Etcetera(Frac(xMulti, y)))), </span>
+<span class="sd">                                      domain=Complexes, conditions=[NotEquals(y, zero)])</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[12]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;\ndistributeFractionThroughSum = Forall([xMulti, y], \n                                      Equals(Frac(Add(xEtc), y),\n                                             Add(Etcetera(Frac(xMulti, y)))), \n                                      domain=Complexes, conditions=[NotEquals(y, zero)])\n&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">distributeFractionThroughSubtract = Forall([x, y, z], </span>
+<span class="sd">                                          Equals(Frac(Sub(x, y), z),</span>
+<span class="sd">                                                 Sub(Frac(x, z), Frac(y, z))), </span>
+<span class="sd">                                          domain=Complexes, conditions=[NotEquals(z, zero)])</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;\ndistributeFractionThroughSubtract = Forall([x, y, z], \n                                          Equals(Frac(Sub(x, y), z),\n                                                 Sub(Frac(x, z), Frac(y, z))), \n                                          domain=Complexes, conditions=[NotEquals(z, zero)])\n&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">distributeFractionThroughSummation = Forall([P, S],</span>
+<span class="sd">                                    Implies(Forall(yMulti, InSet(PyEtc, Complexes), domain=S),</span>
+<span class="sd">                                            Forall(z,</span>
+<span class="sd">                                                   Equals(Frac(Sum(yMulti, PyEtc, domain=S), z),</span>
+<span class="sd">                                                          Sum(yMulti, Frac(PyEtc, z), domain=S)),</span>
+<span class="sd">                                                  domain=Complexes)))</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[14]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;\ndistributeFractionThroughSummation = Forall([P, S],\n                                    Implies(Forall(yMulti, InSet(PyEtc, Complexes), domain=S),\n                                            Forall(z,\n                                                   Equals(Frac(Sum(yMulti, PyEtc, domain=S), z),\n                                                          Sum(yMulti, Frac(PyEtc, z), domain=S)),\n                                                  domain=Complexes)))\n&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">fracInProd = Forall([wMulti, x, y, zMulti], Equals(Mult(wEtc, Frac(x, y), zEtc),</span>
+<span class="sd">                                                   Frac(Mult(wEtc, x, zEtc), y)), domain=Complexes)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[15]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;\nfracInProd = Forall([wMulti, x, y, zMulti], Equals(Mult(wEtc, Frac(x, y), zEtc),\n                                                   Frac(Mult(wEtc, x, zEtc), y)), domain=Complexes)\n&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">prodOfFracs</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">w</span><span class="p">],</span> <span class="n">Equals</span><span class="p">(</span><span class="n">Mult</span><span class="p">(</span><span class="n">Frac</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">z</span><span class="p">),</span> <span class="n">Frac</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">)),</span>
+                                           <span class="n">Frac</span><span class="p">(</span><span class="n">Mult</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">Mult</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">w</span><span class="p">))),</span> <span class="n">domain</span><span class="o">=</span><span class="n">Complexes</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[16]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="prodOfFracs"><a class="ProveItLink" href="_proofs_\prodOfFracs.html">prodOfFracs</a>:</strong> <a class="ProveItLink" href="__pv_it\b4dd5e335b93e2c64402d6c5c836329a8a1491070\expr.html"><img src="__pv_it\b4dd5e335b93e2c64402d6c5c836329a8a1491070\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">prodOfFracsLeftNumerOne</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">],</span> <span class="n">Equals</span><span class="p">(</span><span class="n">Mult</span><span class="p">(</span><span class="n">Frac</span><span class="p">(</span><span class="n">one</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">Frac</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">z</span><span class="p">)),</span>
+                                                 <span class="n">Frac</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Mult</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">))),</span> <span class="n">domain</span><span class="o">=</span><span class="n">Complexes</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[17]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="prodOfFracsLeftNumerOne"><a class="ProveItLink" href="_proofs_\prodOfFracsLeftNumerOne.html">prodOfFracsLeftNumerOne</a>:</strong> <a class="ProveItLink" href="__pv_it\f3abd93f6e73b669a0fe7537da1f570eaaeff4e90\expr.html"><img src="__pv_it\f3abd93f6e73b669a0fe7537da1f570eaaeff4e90\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">prodOfFracsRightNumerOne</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">],</span> <span class="n">Equals</span><span class="p">(</span><span class="n">Mult</span><span class="p">(</span><span class="n">Frac</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">Frac</span><span class="p">(</span><span class="n">one</span><span class="p">,</span> <span class="n">z</span><span class="p">)),</span>
+                                                 <span class="n">Frac</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Mult</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">))),</span> <span class="n">domain</span><span class="o">=</span><span class="n">Complexes</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[18]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="prodOfFracsRightNumerOne"><a class="ProveItLink" href="_proofs_\prodOfFracsRightNumerOne.html">prodOfFracsRightNumerOne</a>:</strong> <a class="ProveItLink" href="__pv_it\cbb01cb28501bfdc52f7aa084b6b91a2c61b8b690\expr.html"><img src="__pv_it\cbb01cb28501bfdc52f7aa084b6b91a2c61b8b690\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">fracCancelLeft</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">],</span>
+                   <span class="n">Equals</span><span class="p">(</span><span class="n">Frac</span><span class="p">(</span><span class="n">Mult</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),</span><span class="n">Mult</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">z</span><span class="p">)),</span>
+                         <span class="n">Frac</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">)),</span><span class="n">domain</span><span class="o">=</span><span class="n">Complexes</span><span class="p">,</span> <span class="n">conditions</span><span class="o">=</span><span class="p">[</span><span class="n">NotEquals</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">zero</span><span class="p">)])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[19]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="fracCancelLeft"><a class="ProveItLink" href="_proofs_\fracCancelLeft.html">fracCancelLeft</a>:</strong> <a class="ProveItLink" href="__pv_it\ca2e55175b2a72344866b54b439b19a6747ca6d90\expr.html"><img src="__pv_it\ca2e55175b2a72344866b54b439b19a6747ca6d90\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">fracCancelDenomLeft</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">],</span>
+                             <span class="n">Equals</span><span class="p">(</span><span class="n">Frac</span><span class="p">(</span><span class="n">Mult</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),</span><span class="n">x</span><span class="p">),</span> <span class="n">y</span><span class="p">),</span>
+                             <span class="n">domain</span><span class="o">=</span><span class="n">Complexes</span><span class="p">,</span> <span class="n">conditions</span><span class="o">=</span><span class="p">[</span><span class="n">NotEquals</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">zero</span><span class="p">)])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[20]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="fracCancelDenomLeft"><a class="ProveItLink" href="_proofs_\fracCancelDenomLeft.html">fracCancelDenomLeft</a>:</strong> <a class="ProveItLink" href="__pv_it\53a770cdd8edb23986542097bfc335cd5bbbe6470\expr.html"><img src="__pv_it\53a770cdd8edb23986542097bfc335cd5bbbe6470\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">fracCancelNumerLeft</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">],</span>
+                             <span class="n">Equals</span><span class="p">(</span><span class="n">Frac</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">Mult</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)),</span>
+                                    <span class="n">Frac</span><span class="p">(</span><span class="n">one</span><span class="p">,</span><span class="n">y</span><span class="p">)),</span><span class="n">domain</span><span class="o">=</span><span class="n">Complexes</span><span class="p">,</span> <span class="n">conditions</span><span class="o">=</span><span class="p">[</span><span class="n">NotEquals</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">zero</span><span class="p">)])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[21]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="fracCancelNumerLeft"><a class="ProveItLink" href="_proofs_\fracCancelNumerLeft.html">fracCancelNumerLeft</a>:</strong> <a class="ProveItLink" href="__pv_it\79b4c115aa81c10fc57cdf77225f1884d95ed88d0\expr.html"><img src="__pv_it\79b4c115aa81c10fc57cdf77225f1884d95ed88d0\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">multFracLeftCancel</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">],</span>
+                      <span class="n">Equals</span><span class="p">(</span><span class="n">Mult</span><span class="p">(</span><span class="n">Frac</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),</span><span class="n">y</span><span class="p">),</span><span class="n">x</span><span class="p">),</span>
+                      <span class="n">domain</span> <span class="o">=</span> <span class="n">Complexes</span><span class="p">,</span> <span class="n">conditions</span> <span class="o">=</span> <span class="p">[</span><span class="n">NotEquals</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">zero</span><span class="p">)])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[22]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="multFracLeftCancel"><a class="ProveItLink" href="_proofs_\multFracLeftCancel.html">multFracLeftCancel</a>:</strong> <a class="ProveItLink" href="__pv_it\514aa2dffe50d2bf268ae7d0f5fc69ba7663bc7e0\expr.html"><img src="__pv_it\514aa2dffe50d2bf268ae7d0f5fc69ba7663bc7e0\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">multFracRightCancel</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">],</span>
+                             <span class="n">Equals</span><span class="p">(</span><span class="n">Mult</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Frac</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)),</span><span class="n">y</span><span class="p">),</span>
+                             <span class="n">domain</span> <span class="o">=</span> <span class="n">Complexes</span><span class="p">,</span> <span class="n">conditions</span> <span class="o">=</span> <span class="p">[</span><span class="n">NotEquals</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">zero</span><span class="p">)])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[23]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="multFracRightCancel"><a class="ProveItLink" href="_proofs_\multFracRightCancel.html">multFracRightCancel</a>:</strong> <a class="ProveItLink" href="__pv_it\0d7e5b85ad69657c6157a82bb26178432e088b850\expr.html"><img src="__pv_it\0d7e5b85ad69657c6157a82bb26178432e088b850\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">fracCancelComplete</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Equals</span><span class="p">(</span><span class="n">Frac</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span> <span class="n">one</span><span class="p">),</span> 
+                            <span class="n">domain</span><span class="o">=</span><span class="n">Complexes</span><span class="p">,</span> <span class="n">conditions</span> <span class="o">=</span> <span class="p">[</span><span class="n">NotEquals</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">zero</span><span class="p">)])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[24]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="fracCancelComplete"><a class="ProveItLink" href="_proofs_\fracCancelComplete.html">fracCancelComplete</a>:</strong> <a class="ProveItLink" href="__pv_it\0643b7ad46cd81705cba2e15e9a2a4c94d48fa540\expr.html"><img src="__pv_it\0643b7ad46cd81705cba2e15e9a2a4c94d48fa540\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">reverseFractionOfSubtractions</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">([</span><span class="n">w</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">],</span> <span class="n">Equals</span><span class="p">(</span><span class="n">Frac</span><span class="p">(</span><span class="n">Subtract</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span> <span class="n">Subtract</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)),</span>
+                                                           <span class="n">Frac</span><span class="p">(</span><span class="n">Subtract</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">),</span> <span class="n">Subtract</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">y</span><span class="p">))),</span> 
+                                       <span class="n">domain</span><span class="o">=</span><span class="n">Complexes</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[25]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="reverseFractionOfSubtractions"><a class="ProveItLink" href="_proofs_\reverseFractionOfSubtractions.html">reverseFractionOfSubtractions</a>:</strong> <a class="ProveItLink" href="__pv_it\dda8a28355aa189fe6ce51bb0e74090fc2c225580\expr.html"><img src="__pv_it\dda8a28355aa189fe6ce51bb0e74090fc2c225580\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">fracIntExp</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">Forall</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> 
+                              <span class="n">Equals</span><span class="p">(</span><span class="n">Frac</span><span class="p">(</span><span class="n">Exp</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">n</span><span class="p">),</span> <span class="n">Exp</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">n</span><span class="p">)),</span>
+                                     <span class="n">Exp</span><span class="p">(</span><span class="n">Frac</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="n">n</span><span class="p">)),</span>
+                             <span class="n">conditions</span> <span class="o">=</span> <span class="p">[</span><span class="n">NotEquals</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">zero</span><span class="p">),</span> <span class="n">NotEquals</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">zero</span><span class="p">)]),</span>
+                    <span class="n">domain</span><span class="o">=</span><span class="n">Integers</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[26]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="fracIntExp"><a class="ProveItLink" href="_proofs_\fracIntExp.html">fracIntExp</a>:</strong> <a class="ProveItLink" href="__pv_it\4e348a1da8c5374db1b1b1fff543f5e2e6e8ad320\expr.html"><img src="__pv_it\4e348a1da8c5374db1b1b1fff543f5e2e6e8ad320\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">fracNatPosExp</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">Forall</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> 
+                              <span class="n">Equals</span><span class="p">(</span><span class="n">Frac</span><span class="p">(</span><span class="n">Exp</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">n</span><span class="p">),</span> <span class="n">Exp</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">n</span><span class="p">)),</span>
+                                     <span class="n">Exp</span><span class="p">(</span><span class="n">Frac</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="n">n</span><span class="p">)),</span>
+                             <span class="n">conditions</span> <span class="o">=</span> <span class="p">[</span><span class="n">NotEquals</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">zero</span><span class="p">)]),</span>
+                    <span class="n">domain</span><span class="o">=</span><span class="n">NaturalsPos</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[27]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="fracNatPosExp"><a class="ProveItLink" href="_proofs_\fracNatPosExp.html">fracNatPosExp</a>:</strong> <a class="ProveItLink" href="__pv_it\1c41761d818383bbadc2c519265f65b80c450ce40\expr.html"><img src="__pv_it\1c41761d818383bbadc2c519265f65b80c450ce40\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">end</span> theorems
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Theorems may be imported from autogenerated _theorems_.py
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+<footer>
+  <p>These web pages were generated on 2018-11-27 by <a href="https://github.com/PyProveIt/Prove-It">Prove-It</a> Beta Version 0.3, licensed under the GNU Public License by Sandia Corporation.</p>
+  <p>Presented proofs are not absolutely guaranteed.  For assurance, it is important to check the structure 
+  of the statement being proven, independently verify the derivation steps, track dependencies, and ensure that 
+  employed axioms are valid and properly structured.  Inconsistencies may exist, unknowingly, in this system.
+  </p>
+  <p>
+  This material is based upon work supported by the U.S. Department of Energy, Office of Science, Office of Advanced Scientific Computing Research, under the Quantum Computing Application Teams program. Sandia National Labs is managed and operated by National Technology and Engineering Solutions of Sandia, LLC, a subsidiary of Honeywell International, Inc., for the U.S. Dept. of Energy's NNSA under contract DE-NA0003525. The views expressed above do not necessarily represent the views of the DOE or the U.S. Government.
+  </p>
+  <br>
+  <p>Please send questions/comments to: <a href="mailto:wwitzel@sandia.gov">
+  wwitzel@sandia.gov</a>.</p>
+</footer> 
+</body>
+
+ 
+
+
+</html>

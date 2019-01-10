@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+<title>Theorems for context proveit.logic.boolean.disjunction</title>
+
+<style type="text/css">
+/* Overrides of notebook CSS for static HTML export */
+body {
+  overflow: visible;
+  padding: 8px;
+}
+div#notebook {
+  overflow: visible;
+  border-top: none;
+}@media print {
+  div.cell {
+    display: block;
+    page-break-inside: avoid;
+  } 
+  div.output_wrapper { 
+    display: block;
+    page-break-inside: avoid; 
+  }
+  div.output { 
+    display: block;
+    page-break-inside: avoid; 
+  }
+}
+</style>
+
+<!-- Custom stylesheet, it must be in the same directory as the html file -->
+<link rel="stylesheet" href="notebook.css">
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script></head>
+<body>
+  <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Theorems-for-context-proveit.logic.boolean.disjunction">Theorems for context <a class="ProveItLink" href="_context_.html">proveit.logic.boolean.disjunction</a><a class="anchor-link" href="#Theorems-for-context-proveit.logic.boolean.disjunction">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">proveit</span> <span class="kn">import</span> <span class="n">varIter</span>
+<span class="kn">from</span> <span class="nn">proveit</span> <span class="kn">import</span> <span class="n">Lambda</span><span class="p">,</span> <span class="n">Iter</span><span class="p">,</span> <span class="n">Indexed</span>
+<span class="kn">from</span> <span class="nn">proveit._common_</span> <span class="kn">import</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">AA</span><span class="p">,</span> <span class="n">CC</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span>
+<span class="kn">from</span> <span class="nn">proveit.logic</span> <span class="kn">import</span> <span class="n">Or</span><span class="p">,</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">,</span> <span class="n">Forall</span><span class="p">,</span> <span class="n">Implies</span><span class="p">,</span> <span class="n">Not</span><span class="p">,</span> <span class="n">inBool</span><span class="p">,</span> <span class="n">And</span><span class="p">,</span> <span class="n">Booleans</span><span class="p">,</span> <span class="n">Equals</span><span class="p">,</span> <span class="n">Set</span>
+<span class="kn">from</span> <span class="nn">proveit.logic._common_</span> <span class="kn">import</span> <span class="n">iterA1m</span><span class="p">,</span> <span class="n">iterC1n</span>
+<span class="kn">from</span> <span class="nn">proveit.number</span> <span class="kn">import</span> <span class="n">Naturals</span><span class="p">,</span> <span class="n">NaturalsPos</span><span class="p">,</span> <span class="n">Add</span><span class="p">,</span> <span class="n">Exp</span><span class="p">,</span> <span class="n">one</span><span class="p">,</span> <span class="n">LessEq</span><span class="p">,</span> <span class="n">LesserSequence</span>
+<span class="o">%</span><span class="k">begin</span> theorems
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Defining theorems for context &#39;proveit.logic.boolean.disjunction&#39;
+Subsequent end-of-cell assignments will define theorems
+&#39;%end theorems&#39; will finalize the definitions
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">trueOrTrue</span> <span class="o">=</span> <span class="n">Or</span><span class="p">(</span><span class="n">TRUE</span><span class="p">,</span> <span class="n">TRUE</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[2]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="trueOrTrue"><a class="ProveItLink" href="_proofs_\trueOrTrue.html">trueOrTrue</a>:</strong> <a class="ProveItLink" href="__pv_it\e97c323cdd30da22b1b9b974ceb567d79030f5670\expr.html"><img src="__pv_it\e97c323cdd30da22b1b9b974ceb567d79030f5670\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">trueOrFalse</span> <span class="o">=</span> <span class="n">Or</span><span class="p">(</span><span class="n">TRUE</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[3]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="trueOrFalse"><a class="ProveItLink" href="_proofs_\trueOrFalse.html">trueOrFalse</a>:</strong> <a class="ProveItLink" href="__pv_it\eec5dacd574712698e86760b8b62868c1668cdd80\expr.html"><img src="__pv_it\eec5dacd574712698e86760b8b62868c1668cdd80\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">falseOrTrue</span> <span class="o">=</span> <span class="n">Or</span><span class="p">(</span><span class="n">FALSE</span><span class="p">,</span> <span class="n">TRUE</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[4]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="falseOrTrue"><a class="ProveItLink" href="_proofs_\falseOrTrue.html">falseOrTrue</a>:</strong> <a class="ProveItLink" href="__pv_it\1da6b0e09dcd4642d4419ced0432f25c508208780\expr.html"><img src="__pv_it\1da6b0e09dcd4642d4419ced0432f25c508208780\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">falseOrFalseNegated</span> <span class="o">=</span> <span class="n">Not</span><span class="p">(</span><span class="n">Or</span><span class="p">(</span><span class="n">FALSE</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="falseOrFalseNegated"><a class="ProveItLink" href="_proofs_\falseOrFalseNegated.html">falseOrFalseNegated</a>:</strong> <a class="ProveItLink" href="__pv_it\89d93ab2a58b4ca9966107b3308820d50ebc7a700\expr.html"><img src="__pv_it\89d93ab2a58b4ca9966107b3308820d50ebc7a700\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">orIfBoth</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">((</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">Or</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">conditions</span><span class="o">=</span><span class="p">[</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[6]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="orIfBoth"><a class="ProveItLink" href="_proofs_\orIfBoth.html">orIfBoth</a>:</strong> <a class="ProveItLink" href="__pv_it\9a1500b85c3ee0956a4189cef54e76cb1500b8ec0\expr.html"><img src="__pv_it\9a1500b85c3ee0956a4189cef54e76cb1500b8ec0\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">orIfOnlyLeft</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">((</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">Or</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">conditions</span><span class="o">=</span><span class="p">[</span><span class="n">A</span><span class="p">,</span> <span class="n">Not</span><span class="p">(</span><span class="n">B</span><span class="p">)])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[7]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="orIfOnlyLeft"><a class="ProveItLink" href="_proofs_\orIfOnlyLeft.html">orIfOnlyLeft</a>:</strong> <a class="ProveItLink" href="__pv_it\9279c0c75d9416efd02921766ed6545ee815ec8f0\expr.html"><img src="__pv_it\9279c0c75d9416efd02921766ed6545ee815ec8f0\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">orIfOnlyRight</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">((</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">Or</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">conditions</span><span class="o">=</span><span class="p">[</span><span class="n">Not</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="n">B</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="orIfOnlyRight"><a class="ProveItLink" href="_proofs_\orIfOnlyRight.html">orIfOnlyRight</a>:</strong> <a class="ProveItLink" href="__pv_it\6a6b5ffde6b6ce6b719d9815d06baed453e246970\expr.html"><img src="__pv_it\6a6b5ffde6b6ce6b719d9815d06baed453e246970\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">neitherIntro</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">((</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">Not</span><span class="p">(</span><span class="n">Or</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)),</span> <span class="n">conditions</span><span class="o">=</span><span class="p">[</span><span class="n">Not</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="n">Not</span><span class="p">(</span><span class="n">B</span><span class="p">)])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[9]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="neitherIntro"><a class="ProveItLink" href="_proofs_\neitherIntro.html">neitherIntro</a>:</strong> <a class="ProveItLink" href="__pv_it\b66c6c47585630ad806c9c1acc6d0bbac5a84b580\expr.html"><img src="__pv_it\b66c6c47585630ad806c9c1acc6d0bbac5a84b580\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">binaryOrContradiction</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">((</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">FALSE</span><span class="p">,</span> <span class="n">conditions</span><span class="o">=</span><span class="p">(</span><span class="n">Or</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">Not</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="n">Not</span><span class="p">(</span><span class="n">B</span><span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[10]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="binaryOrContradiction"><a class="ProveItLink" href="_proofs_\binaryOrContradiction.html">binaryOrContradiction</a>:</strong> <a class="ProveItLink" href="__pv_it\e31305bfb13c9736d2a4f2955ac5b16b6eadb8ae0\expr.html"><img src="__pv_it\e31305bfb13c9736d2a4f2955ac5b16b6eadb8ae0\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">leftIfNotRight</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">((</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">A</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="n">Booleans</span><span class="p">,</span> <span class="n">conditions</span><span class="o">=</span><span class="p">(</span><span class="n">Or</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">Not</span><span class="p">(</span><span class="n">B</span><span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[11]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="leftIfNotRight"><a class="ProveItLink" href="_proofs_\leftIfNotRight.html">leftIfNotRight</a>:</strong> <a class="ProveItLink" href="__pv_it\6902aed10c34ff0f24ab5b5235e0d81da33ae5730\expr.html"><img src="__pv_it\6902aed10c34ff0f24ab5b5235e0d81da33ae5730\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">rightIfNotLeft</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">((</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">B</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="n">Booleans</span><span class="p">,</span> <span class="n">conditions</span><span class="o">=</span><span class="p">(</span><span class="n">Or</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">Not</span><span class="p">(</span><span class="n">A</span><span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[12]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="rightIfNotLeft"><a class="ProveItLink" href="_proofs_\rightIfNotLeft.html">rightIfNotLeft</a>:</strong> <a class="ProveItLink" href="__pv_it\25a5bd3d08ff9bfb204996de14caf50be9d1220e0\expr.html"><img src="__pv_it\25a5bd3d08ff9bfb204996de14caf50be9d1220e0\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This <strong>constrained singular constructive dilemma</strong> will require a single provable $C$ be designated as a Boolean.  The "unconstrained" version will drop this constraint, using the constrained version as a convenient Lemma.  This will all culminate to the <strong>constructive dilemma</strong>, below, that can prove some $C \lor D$ given $A \lor B$, $A \Rightarrow C$ and $B \Rightarrow D$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">constrainedSingularConstructiveDilemma</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">((</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">),</span> <span class="n">C</span><span class="p">,</span> <span class="n">conditions</span><span class="o">=</span><span class="p">[</span><span class="n">Or</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">Implies</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">C</span><span class="p">),</span> <span class="n">Implies</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">)],</span>
+                                                <span class="n">domain</span><span class="o">=</span><span class="n">Booleans</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="constrainedSingularConstructiveDilemma"><a class="ProveItLink" href="_proofs_\constrainedSingularConstructiveDilemma.html">constrainedSingularConstructiveDilemma</a>:</strong> <a class="ProveItLink" href="__pv_it\7223c9df709c7e418728addba3e612ba575597030\expr.html"><img src="__pv_it\7223c9df709c7e418728addba3e612ba575597030\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">singularConstructiveDilemma</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">((</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">Forall</span><span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">conditions</span><span class="o">=</span><span class="p">[</span><span class="n">Implies</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">C</span><span class="p">),</span> <span class="n">Implies</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">)]),</span> 
+                                     <span class="n">domain</span><span class="o">=</span><span class="n">Booleans</span><span class="p">,</span> <span class="n">conditions</span><span class="o">=</span><span class="p">[</span><span class="n">Or</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[14]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="singularConstructiveDilemma"><a class="ProveItLink" href="_proofs_\singularConstructiveDilemma.html">singularConstructiveDilemma</a>:</strong> <a class="ProveItLink" href="__pv_it\5b87c0eedca27defcfd8384ce049aeb3741a3a240\expr.html"><img src="__pv_it\5b87c0eedca27defcfd8384ce049aeb3741a3a240\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">orIfLeft</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">((</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">Or</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">domain</span><span class="o">=</span><span class="n">Booleans</span><span class="p">,</span> <span class="n">conditions</span><span class="o">=</span><span class="p">[</span><span class="n">A</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[15]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="orIfLeft"><a class="ProveItLink" href="_proofs_\orIfLeft.html">orIfLeft</a>:</strong> <a class="ProveItLink" href="__pv_it\7814f69cf23c6763d566ff710ff6eca304bc89230\expr.html"><img src="__pv_it\7814f69cf23c6763d566ff710ff6eca304bc89230\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">orIfRight</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">((</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">Or</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">domain</span><span class="o">=</span><span class="n">Booleans</span><span class="p">,</span> <span class="n">conditions</span><span class="o">=</span><span class="p">[</span><span class="n">B</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[16]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="orIfRight"><a class="ProveItLink" href="_proofs_\orIfRight.html">orIfRight</a>:</strong> <a class="ProveItLink" href="__pv_it\70854f1556d2df3aaa11379eb9a7db1c4ea3c11d0\expr.html"><img src="__pv_it\70854f1556d2df3aaa11379eb9a7db1c4ea3c11d0\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">constructiveDilemma</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">((</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">D</span><span class="p">),</span> <span class="n">Or</span><span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">D</span><span class="p">),</span> <span class="n">domain</span><span class="o">=</span><span class="n">Booleans</span><span class="p">,</span> 
+                             <span class="n">conditions</span><span class="o">=</span><span class="p">[</span><span class="n">Or</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">Implies</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">C</span><span class="p">),</span> <span class="n">Implies</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="n">D</span><span class="p">)])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[17]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="constructiveDilemma"><a class="ProveItLink" href="_proofs_\constructiveDilemma.html">constructiveDilemma</a>:</strong> <a class="ProveItLink" href="__pv_it\9a082ebbf13415ad7005d8649b68a4c58660aa360\expr.html"><img src="__pv_it\9a082ebbf13415ad7005d8649b68a4c58660aa360\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">destructiveDilemma</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">((</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">D</span><span class="p">),</span> <span class="n">Or</span><span class="p">(</span><span class="n">Not</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="n">Not</span><span class="p">(</span><span class="n">B</span><span class="p">)),</span> <span class="n">domain</span><span class="o">=</span><span class="n">Booleans</span><span class="p">,</span> 
+                            <span class="n">conditions</span><span class="o">=</span><span class="p">[</span><span class="n">Or</span><span class="p">(</span><span class="n">Not</span><span class="p">(</span><span class="n">C</span><span class="p">),</span> <span class="n">Not</span><span class="p">(</span><span class="n">D</span><span class="p">)),</span> <span class="n">Implies</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">C</span><span class="p">),</span> <span class="n">Implies</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="n">D</span><span class="p">)])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[18]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="destructiveDilemma"><a class="ProveItLink" href="_proofs_\destructiveDilemma.html">destructiveDilemma</a>:</strong> <a class="ProveItLink" href="__pv_it\e8d36dad2d649e079c55688242b19f33eb55dc1d0\expr.html"><img src="__pv_it\e8d36dad2d649e079c55688242b19f33eb55dc1d0\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">notLeftIfNeither</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">((</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">Not</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="n">conditions</span><span class="o">=</span><span class="p">(</span><span class="n">Not</span><span class="p">(</span><span class="n">Or</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">))))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[19]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="notLeftIfNeither"><a class="ProveItLink" href="_proofs_\notLeftIfNeither.html">notLeftIfNeither</a>:</strong> <a class="ProveItLink" href="__pv_it\741e45a4289586be1ec81ab36b504c60301d5f4d0\expr.html"><img src="__pv_it\741e45a4289586be1ec81ab36b504c60301d5f4d0\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">notRightIfNeither</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">((</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">Not</span><span class="p">(</span><span class="n">B</span><span class="p">),</span> <span class="n">conditions</span><span class="o">=</span><span class="p">(</span><span class="n">Not</span><span class="p">(</span><span class="n">Or</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">))))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[20]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="notRightIfNeither"><a class="ProveItLink" href="_proofs_\notRightIfNeither.html">notRightIfNeither</a>:</strong> <a class="ProveItLink" href="__pv_it\78fcbed9dec1ba603b0eabac0c70c6de8b4b47380\expr.html"><img src="__pv_it\78fcbed9dec1ba603b0eabac0c70c6de8b4b47380\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">eachInBool</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">((</span><span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">),</span> <span class="n">Forall</span><span class="p">((</span><span class="n">AA</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">CC</span><span class="p">),</span> <span class="n">inBool</span><span class="p">(</span><span class="n">B</span><span class="p">),</span> <span class="n">conditions</span><span class="o">=</span><span class="n">inBool</span><span class="p">(</span><span class="n">Or</span><span class="p">(</span><span class="n">iterA1m</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">iterC1n</span><span class="p">))),</span>
+                    <span class="n">domain</span><span class="o">=</span><span class="n">Naturals</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[21]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="eachInBool"><a class="ProveItLink" href="_proofs_\eachInBool.html">eachInBool</a>:</strong> <a class="ProveItLink" href="__pv_it\09d4e9f179de0f22377257d7159075aca80f71f40\expr.html"><img src="__pv_it\09d4e9f179de0f22377257d7159075aca80f71f40\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">orIfAny</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">((</span><span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">),</span> <span class="n">Forall</span><span class="p">((</span><span class="n">AA</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">CC</span><span class="p">),</span> <span class="n">Or</span><span class="p">(</span><span class="n">iterA1m</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">iterC1n</span><span class="p">),</span> 
+                                <span class="n">domains</span><span class="o">=</span><span class="p">[</span><span class="n">Exp</span><span class="p">(</span><span class="n">Booleans</span><span class="p">,</span> <span class="n">m</span><span class="p">),</span> <span class="n">Booleans</span><span class="p">,</span> <span class="n">Exp</span><span class="p">(</span><span class="n">Booleans</span><span class="p">,</span> <span class="n">n</span><span class="p">)],</span> <span class="n">conditions</span><span class="o">=</span><span class="p">[</span><span class="n">B</span><span class="p">]),</span>
+                 <span class="n">domain</span><span class="o">=</span><span class="n">Naturals</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[22]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="orIfAny"><a class="ProveItLink" href="_proofs_\orIfAny.html">orIfAny</a>:</strong> <a class="ProveItLink" href="__pv_it\ed16cb2a6583347e1072e00da18840515df185af0\expr.html"><img src="__pv_it\ed16cb2a6583347e1072e00da18840515df185af0\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">notOrIfNotAny</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">Forall</span><span class="p">(</span><span class="n">AA</span><span class="p">,</span> <span class="n">Not</span><span class="p">(</span><span class="n">Or</span><span class="p">(</span><span class="n">iterA1m</span><span class="p">)),</span>  
+                                 <span class="n">conditions</span><span class="o">=</span><span class="p">[</span><span class="n">Iter</span><span class="p">(</span><span class="n">Lambda</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">Not</span><span class="p">(</span><span class="n">Indexed</span><span class="p">(</span><span class="n">AA</span><span class="p">,</span> <span class="n">i</span><span class="p">))),</span> <span class="n">one</span><span class="p">,</span> <span class="n">m</span><span class="p">)]),</span>
+                       <span class="n">domain</span><span class="o">=</span><span class="n">Naturals</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[23]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="notOrIfNotAny"><a class="ProveItLink" href="_proofs_\notOrIfNotAny.html">notOrIfNotAny</a>:</strong> <a class="ProveItLink" href="__pv_it\d01922d097643c12b531e9feccf11b697e2856740\expr.html"><img src="__pv_it\d01922d097643c12b531e9feccf11b697e2856740\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">orContradiction</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">Forall</span><span class="p">(</span><span class="n">AA</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">,</span> <span class="n">conditions</span><span class="o">=</span><span class="p">(</span><span class="n">Or</span><span class="p">(</span><span class="n">iterA1m</span><span class="p">),</span> <span class="n">Iter</span><span class="p">(</span><span class="n">Lambda</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">Not</span><span class="p">(</span><span class="n">Indexed</span><span class="p">(</span><span class="n">AA</span><span class="p">,</span> <span class="n">i</span><span class="p">))),</span> <span class="n">one</span><span class="p">,</span> <span class="n">m</span><span class="p">))),</span>
+                         <span class="n">domain</span><span class="o">=</span><span class="n">Naturals</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[24]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="orContradiction"><a class="ProveItLink" href="_proofs_\orContradiction.html">orContradiction</a>:</strong> <a class="ProveItLink" href="__pv_it\1f12e6b2ab63a4d17fe17eefa0b6791d354f1a780\expr.html"><img src="__pv_it\1f12e6b2ab63a4d17fe17eefa0b6791d354f1a780\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">groupSwap</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">((</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">m</span><span class="p">),</span> 
+                   <span class="n">Forall</span><span class="p">(</span><span class="n">AA</span><span class="p">,</span> <span class="n">Or</span><span class="p">(</span><span class="n">varIter</span><span class="p">(</span><span class="n">AA</span><span class="p">,</span> <span class="n">one</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">varIter</span><span class="p">(</span><span class="n">AA</span><span class="p">,</span> <span class="n">Add</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">one</span><span class="p">),</span> <span class="n">l</span><span class="p">),</span> <span class="n">varIter</span><span class="p">(</span><span class="n">AA</span><span class="p">,</span> <span class="n">Add</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">one</span><span class="p">),</span> <span class="n">k</span><span class="p">),</span> 
+                                <span class="n">varIter</span><span class="p">(</span><span class="n">AA</span><span class="p">,</span> <span class="n">Or</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">one</span><span class="p">),</span> <span class="n">j</span><span class="p">),</span> <span class="n">varIter</span><span class="p">(</span><span class="n">AA</span><span class="p">,</span> <span class="n">Add</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">one</span><span class="p">),</span> <span class="n">m</span><span class="p">)),</span>
+                          <span class="n">conditions</span><span class="o">=</span><span class="p">[</span><span class="n">Or</span><span class="p">(</span><span class="n">iterA1m</span><span class="p">)]),</span>
+                   <span class="n">domain</span> <span class="o">=</span> <span class="n">Naturals</span><span class="p">,</span> <span class="n">conditions</span><span class="o">=</span><span class="p">[</span><span class="n">LesserSequence</span><span class="p">([</span><span class="n">LessEq</span><span class="o">.</span><span class="n">_operator_</span><span class="p">]</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">m</span><span class="p">))])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[25]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="groupSwap"><a class="ProveItLink" href="_proofs_\groupSwap.html">groupSwap</a>:</strong> <a class="ProveItLink" href="__pv_it\e36f3fe4edb654decba9e541007edc76d18704250\expr.html"><img src="__pv_it\e36f3fe4edb654decba9e541007edc76d18704250\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">trueEval</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">((</span><span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">),</span> <span class="n">Forall</span><span class="p">((</span><span class="n">AA</span><span class="p">,</span> <span class="n">CC</span><span class="p">),</span> <span class="n">Equals</span><span class="p">(</span><span class="n">Or</span><span class="p">(</span><span class="n">iterA1m</span><span class="p">,</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">iterC1n</span><span class="p">),</span> <span class="n">TRUE</span><span class="p">),</span>
+                                 <span class="n">domains</span><span class="o">=</span><span class="p">[</span><span class="n">Exp</span><span class="p">(</span><span class="n">Booleans</span><span class="p">,</span> <span class="n">m</span><span class="p">),</span> <span class="n">Exp</span><span class="p">(</span><span class="n">Booleans</span><span class="p">,</span> <span class="n">n</span><span class="p">)]),</span>
+                  <span class="n">domain</span><span class="o">=</span><span class="n">Naturals</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[26]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="trueEval"><a class="ProveItLink" href="_proofs_\trueEval.html">trueEval</a>:</strong> <a class="ProveItLink" href="__pv_it\f0c948cbabb8bd3e2535ec31fd26774793fdd8fa0\expr.html"><img src="__pv_it\f0c948cbabb8bd3e2535ec31fd26774793fdd8fa0\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">falseEval</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">Forall</span><span class="p">(</span><span class="n">AA</span><span class="p">,</span> <span class="n">Equals</span><span class="p">(</span><span class="n">Or</span><span class="p">(</span><span class="n">iterA1m</span><span class="p">),</span> <span class="n">FALSE</span><span class="p">),</span> <span class="n">domain</span><span class="o">=</span><span class="n">Exp</span><span class="p">(</span><span class="n">Set</span><span class="p">(</span><span class="n">FALSE</span><span class="p">),</span> <span class="n">m</span><span class="p">)),</span>
+                   <span class="n">domain</span><span class="o">=</span><span class="n">Naturals</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[27]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="falseEval"><a class="ProveItLink" href="_proofs_\falseEval.html">falseEval</a>:</strong> <a class="ProveItLink" href="__pv_it\f85b5de3e405cd9a6d5db9b7fe7977e0eda3d19d0\expr.html"><img src="__pv_it\f85b5de3e405cd9a6d5db9b7fe7977e0eda3d19d0\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">binaryClosure</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">((</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">inBool</span><span class="p">(</span><span class="n">Or</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)),</span> <span class="n">domain</span><span class="o">=</span><span class="n">Booleans</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[28]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="binaryClosure"><a class="ProveItLink" href="_proofs_\binaryClosure.html">binaryClosure</a>:</strong> <a class="ProveItLink" href="__pv_it\03ccbb904c77ddf661d14da0dcaf47b2bc417a1d0\expr.html"><img src="__pv_it\03ccbb904c77ddf661d14da0dcaf47b2bc417a1d0\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">closure</span> <span class="o">=</span> <span class="n">Forall</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">Forall</span><span class="p">(</span><span class="n">AA</span><span class="p">,</span> <span class="n">inBool</span><span class="p">(</span><span class="n">Or</span><span class="p">(</span><span class="n">iterA1m</span><span class="p">)),</span> <span class="n">domain</span><span class="o">=</span><span class="n">Exp</span><span class="p">(</span><span class="n">Booleans</span><span class="p">,</span> <span class="n">m</span><span class="p">)),</span>
+                 <span class="n">domain</span><span class="o">=</span><span class="n">Naturals</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[29]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<strong id="closure"><a class="ProveItLink" href="_proofs_\closure.html">closure</a>:</strong> <a class="ProveItLink" href="__pv_it\00477a29e579b2d87cbc651a99ed1c0d0ee4fe8c0\expr.html"><img src="__pv_it\00477a29e579b2d87cbc651a99ed1c0d0ee4fe8c0\expr.png" style="display:inline;vertical-align:middle;" /></a><br>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">end</span> theorems
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Theorems may be imported from autogenerated _theorems_.py
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+<footer>
+  <p>These web pages were generated on 2018-11-27 by <a href="https://github.com/PyProveIt/Prove-It">Prove-It</a> Beta Version 0.3, licensed under the GNU Public License by Sandia Corporation.</p>
+  <p>Presented proofs are not absolutely guaranteed.  For assurance, it is important to check the structure 
+  of the statement being proven, independently verify the derivation steps, track dependencies, and ensure that 
+  employed axioms are valid and properly structured.  Inconsistencies may exist, unknowingly, in this system.
+  </p>
+  <p>
+  This material is based upon work supported by the U.S. Department of Energy, Office of Science, Office of Advanced Scientific Computing Research, under the Quantum Computing Application Teams program. Sandia National Labs is managed and operated by National Technology and Engineering Solutions of Sandia, LLC, a subsidiary of Honeywell International, Inc., for the U.S. Dept. of Energy's NNSA under contract DE-NA0003525. The views expressed above do not necessarily represent the views of the DOE or the U.S. Government.
+  </p>
+  <br>
+  <p>Please send questions/comments to: <a href="mailto:wwitzel@sandia.gov">
+  wwitzel@sandia.gov</a>.</p>
+</footer> 
+</body>
+
+ 
+
+
+</html>
